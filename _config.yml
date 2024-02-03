@@ -352,9 +352,9 @@ plugins:
 # Used on index and about sites
 # social:
 #   name:                <firstname> <lastname>
-  links:
-    # - https://twitter.com/<username>
-    - https://github.com/jaenam615
+# links:
+#   - https://twitter.com/<username>
+#   - https://github.com/jaenam615
 
 # Plugin Configs
 # ---------------------------------------------------------------------------------------

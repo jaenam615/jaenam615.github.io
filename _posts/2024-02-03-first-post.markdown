@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "가상화"
-date: 2024-02-04 12:52:00 +0900
+date: 2024-02-03 13:30:00 +0900
 categories: Computer Science
 ---
 
@@ -18,13 +18,3 @@ categories: Computer Science
 이게 무슨 말이냐면,
 하나의 실물 컴퓨팅 자원을 마치 여러 개인 것처럼 가상으로 쪼개서 사용하거나,
 여러 개의 실물 컴퓨팅 자원들을 묶어서 하나의 자원인 것처럼 사용하겠다는 것이다.
-
-{% highlight ruby %}
-def print_hi(name)
-puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
