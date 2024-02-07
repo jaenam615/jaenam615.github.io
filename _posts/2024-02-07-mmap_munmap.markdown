@@ -5,6 +5,21 @@ date: 2024-02-07 15:43:00 +0900
 categories: Computer Science
 ---
 
+About mmap() and munmap() functions
+{:.note}
+
+1. MMAP
+
+- address
+- length
+- protect
+- flags
+- fildes
+- offset
+
+2. MUNMAP
+   {:toc .large-only}
+
 `mmap()`함수와 `munmap()`함수는 가상 메모리의 영역들을 생성하고 삭제할 수 있게 해주는 함수들이다.
 
 ## MMAP
