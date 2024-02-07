@@ -41,15 +41,15 @@ logo: /assets/img/logo.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name: <Jaehee> <Nam>
-  email: <jaenam2060@gmail.com>
+  name: Jaehee Nam
+  email: jaenam2060@gmail.com
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title: Example
-    url: /example/
+  - title: Posts
+    url: /posts/
   - title: Documentation
     url: /docs/
   - title: About
