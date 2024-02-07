@@ -5,10 +5,11 @@ sitemap: false
 
 # LICENSE
 
-* this list will be replaced by the toc
-{:toc .large-only}
+- this list will be replaced by the toc
+  {:toc .large-only}
 
 ## GNU GENERAL PUBLIC LICENSE
+
 {:.no_toc}
 
 Version 3, 29 June 2007
@@ -229,6 +230,7 @@ terms of section 4, provided that you also meet all of these
 conditions:
 
 {:style="list-style-type:lower-latin"}
+
 1.  The work must carry prominent notices stating that you modified
     it, and giving a relevant date.
 2.  The work must carry prominent notices stating that it is
@@ -265,6 +267,7 @@ Corresponding Source under the terms of this License, in one of these
 ways:
 
 {:style="list-style-type:lower-latin"}
+
 1.  Convey the object code in, or embodied in, a physical product
     (including a physical distribution medium), accompanied by the
     Corresponding Source fixed on a durable physical medium
@@ -377,6 +380,7 @@ add to a covered work, you may (if authorized by the copyright holders
 of that material) supplement the terms of this License with terms:
 
 {:style="list-style-type:lower-latin"}
+
 1.  Disclaiming warranty or limiting liability differently from the
     terms of sections 15 and 16 of this License; or
 2.  Requiring preservation of specified reasonable legal notices or
