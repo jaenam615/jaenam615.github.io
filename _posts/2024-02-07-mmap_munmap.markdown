@@ -7,7 +7,7 @@ categories: Computer Science
 
 `mmap()`함수와 `munmap()`함수는 가상 메모리의 영역들을 생성하고 삭제할 수 있게 해주는 함수들이다.
 
-<h2>MMAP</h2>
+## MMAP
 
 `mmap()`함수는 Memory Map이라는 뜻을 가지며, 말 그대로 메모리를 매핑하여 가상 메모리의 영역을 생성하고 삭제할 수 있게 해준다.
 커널에 새 가상메모리 영역을 생성해 줄 것을 요청하며, 객체들을 이 영역으로 매핑할 수 있다.
@@ -16,17 +16,17 @@ categories: Computer Science
 `mmap()`함수는 다음의 6 인자들을 받는다.  
 `void *address`, `size_t length`, `int protect`, `int flags`, `int filedes`, `off_t offset`
 
-<h3>address</h3>
+### address
 
 이 인자는 매핑에 선호하는 시작 주소를 함수로 전달하며, 대개 `NULL`로 명시한다.
 다른 매핑이 해당 주소에 존재하지 않다면 커널은 근처의 페이지 영역을 선택하여 매핑을 한다.
 해당 인자에 `NULL`이 패스된다면 커널은 적절한 위치를 찾아 매핑을 한다.
 
-<h3>length</h3>
+### length
 
 매핑 될 바이트의 수이다.
 
-<h3>protect</h3>
+### protect
 
 이 인자는 어떤 접근이 허용되는지 제어하기 위해 사용된다.
 파일에 대응되는 메모리 영역의 보호 특성을 결정하기 위해 다음의 비트들이 있으며,
@@ -37,7 +37,7 @@ categories: Computer Science
 `PROT_WRITE` : 쓰기 가능한 페이지
 `PROT_NONE` : 접근 불가능한 페이지
 
-<h3>flags</h3>
+### flags
 
 매핑의 유형과 동작 구성 요소를 결정하는 값이다.
 이는 대응되는 페이지 복사본에 대한 수정이 해당 프로세스에서만 보일 것인지, 아니면 다른 참조하는 프로세스와 공유할 것인지를 설정한다.
@@ -51,11 +51,11 @@ categories: Computer Science
 
 매핑될 파일 디스크립터이다.
 
-<h3>offset</h3>
+### offset
 
 매핑할 때, 옮길 데이터의 시작점을 지정하는 인수이다.
 
-<h2>MUNMAP</h2>
+## MUNMAP
 
 `munmap()`함수는 가상메모리의 영역들을 삭제한다.
 
