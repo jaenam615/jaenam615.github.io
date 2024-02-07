@@ -47,7 +47,7 @@ categories: Computer Science
 `MAP_ANONYMOUS || MAP_ANON` : 익명의 매핑을 만들며, 파일 디스크립터로 인식하지 않는다. 어떠한 파일에도 연결되지 않으며, 힙을 늘리는 방식으로 사용된다.
 `MAP_FIXED` : 지정된 주소 이외의 다른 주소를 선택하지 않는다. 이 때, 지정된 주소가 사용될 수 없다면 mmap()은 실패한다.
 
-<h3>filedes</h3>
+### filedes
 
 매핑될 파일 디스크립터이다.
 
