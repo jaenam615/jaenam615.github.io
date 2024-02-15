@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "System Call"
+title: "Exceptional Control Flow"
 date: 2024-02-08 19:30:00 +0900
 categories: Computer_Science, OS
 image: 
