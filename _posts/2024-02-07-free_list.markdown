@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post, blog
 title: "Explicit & Implicit Free List"
 date: 2024-02-07 21:00:00 +0900
 categories: Computer_Science

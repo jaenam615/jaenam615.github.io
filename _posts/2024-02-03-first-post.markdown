@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post, blog
 title: "가상화"
 date: 2024-02-03 13:30:00 +0900
 categories: Computer Science
