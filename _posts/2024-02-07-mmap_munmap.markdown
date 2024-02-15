@@ -1,5 +1,5 @@
 ---
-layout: post, blog
+layout: post
 title: "MMAP & MUNMAP"
 date: 2024-02-07 15:43:00 +0900
 categories: Computer_Science

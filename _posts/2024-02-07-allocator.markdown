@@ -1,5 +1,5 @@
 ---
-layout: post, blog
+layout: post
 title: "동적 메모리 할당기"
 date: 2024-02-07 20:00:00 +0900
 categories: Computer_Science
