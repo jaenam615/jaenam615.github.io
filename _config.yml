@@ -49,8 +49,8 @@ author:
 
 # Add links to the sidebar.
 menu:
-  - title: Blog
-    url: /blog/
+  - title: Devlog
+    url: /devlog/
   - title: Posts
     url: /posts/
   - title: Documentation
