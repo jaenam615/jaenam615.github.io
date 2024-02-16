@@ -2,10 +2,8 @@
 layout: blog
 title: Blog
 description: >
-  Jae's Blog
+  개발 기록
 grouped: true
 
-description: >
-  개발 기록
 sitemap: false
 ---
