@@ -11,7 +11,7 @@ order: 1
 # Computer Science
 
 ---
-## [Data Structure](./datastructure)
+## [Data Structure](/datastructure)
 ---
-## [Algorithm](./algorithm)
+## [Algorithm](/algorithm)
 ---
