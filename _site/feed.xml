@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-17T00:39:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-17T14:10:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#ecf" id="markdown-toc-ecf">ECF</a></li>
   <li><a href="#예외상황" id="markdown-toc-예외상황">예외상황</a>    <ul>
@@ -156,112 +156,7 @@ C++ 에서는 <code class="language-plaintext highlighter-rouge">new()</code>와
 <p>묵시적 할당기는 할당된 블록이 더 이상 프로그램에 의해 사용되지 않는지 할당기가 검출할 수 있을 것을 요구하며, <br />
 이러한 검출을 통해 블록의 반환이 별도의 함수 호출 없이 이루어진다.<br />
 묵시적 할당기는 <i>garbage collector</i>라고도 알려져 있으며, 자동으로 사용하지 않는 할당된 블록을 반환하는 작업을 가비지 컬렉션이라고 부른다. <br />
-List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">동적 메모리 할당기</title><link href="http://localhost:4000/devlog/computer_science/2024-02-07-allocator/" rel="alternate" type="text/html" title="동적 메모리 할당기" /><published>2024-02-07T20:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/devlog/computer_science/allocator</id><content type="html" xml:base="http://localhost:4000/devlog/computer_science/2024-02-07-allocator/"><![CDATA[<ul class="large-only" id="markdown-toc">
-  <li><a href="#동적-메모리-할당기" id="markdown-toc-동적-메모리-할당기">동적 메모리 할당기</a>    <ul>
-      <li><a href="#명시적-할당기-1" id="markdown-toc-명시적-할당기-1">명시적 할당기</a></li>
-      <li><a href="#묵시적-할당기-1" id="markdown-toc-묵시적-할당기-1">묵시적 할당기</a></li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="동적-메모리-할당기">동적 메모리 할당기</h2>
-
-<p>저수준의 mmap과 munmap 함수들을 사용하여 가상메모리의 영역을 생성하고 삭제할 수 있지만, <br />
-대개 추가적인 가상메모리를 런타임에 획득할 필요가 있을 때 <i>동적 메모리 할당기</i>라는 것을 사용하는 것이 편리하고 호환성이 좋다고 여겨진다.</p>
-
-<p>동적 메모리 할당기는 <i>heap</i>, 즉 프로세스의 가상 메모리 영역을 관리한다. <br />
-할당기는 힙을 다양한 크기의 블록들의 집합으로 관리하며, 이 때 각 블록은 할당되었거나 가용한 가상메모리의 연속적인 묶음이다.</p>
-
-<p>할당기에는 두 개의 기본 유형이 있다:</p>
-<ul>
-  <li>명시적 할당기</li>
-  <li>묵시적 할당기</li>
-</ul>
-
-<p>두 유형 모두 할당시에는 명시적으로 블록을 할당하도록 요구하지만, 할당된 블록을 반환하는 방식에 차이가 있다.</p>
-
-<h3 id="명시적-할당기-1">명시적 할당기</h3>
-
-<p>명시적 할당기는 할당된 블록의 반환하기 위해 애플리케이션이 명시적으로 요구해야 한다. <br />
-예시로는 C 표준 라이브러리의 <code class="language-plaintext highlighter-rouge">malloc()</code> 함수가 있다.<br />
-C 프로그램은 malloc 함수를 호출해서 블록을 할당하며, 할당된 블록을 반환하기 위해서는 <code class="language-plaintext highlighter-rouge">free()</code>함수를 호출해야 한다. <br />
-C++ 에서는 <code class="language-plaintext highlighter-rouge">new()</code>와 <code class="language-plaintext highlighter-rouge">delete()</code>가 있다.</p>
-
-<h3 id="묵시적-할당기-1">묵시적 할당기</h3>
-
-<p>묵시적 할당기는 할당된 블록이 더 이상 프로그램에 의해 사용되지 않는지 할당기가 검출할 수 있을 것을 요구하며, <br />
-이러한 검출을 통해 블록의 반환이 별도의 함수 호출 없이 이루어진다.<br />
-묵시적 할당기는 <i>garbage collector</i>라고도 알려져 있으며, 자동으로 사용하지 않는 할당된 블록을 반환하는 작업을 가비지 컬렉션이라고 부른다. <br />
-List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="devlog" /><category term="Computer_Science" /></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/devlog/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/devlog/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/devlog/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
-  <li><a href="#mmap" id="markdown-toc-mmap">MMAP</a>    <ul>
-      <li><a href="#address-1" id="markdown-toc-address-1">address</a></li>
-      <li><a href="#length-1" id="markdown-toc-length-1">length</a></li>
-      <li><a href="#protect-1" id="markdown-toc-protect-1">protect</a></li>
-      <li><a href="#flags-1" id="markdown-toc-flags-1">flags</a></li>
-      <li><a href="#filedes" id="markdown-toc-filedes">filedes</a></li>
-      <li><a href="#offset-1" id="markdown-toc-offset-1">offset</a></li>
-    </ul>
-  </li>
-  <li><a href="#munmap" id="markdown-toc-munmap">MUNMAP</a></li>
-</ul>
-
-<p><code class="language-plaintext highlighter-rouge">mmap()</code>함수와 <code class="language-plaintext highlighter-rouge">munmap()</code>함수는 가상 메모리의 영역들을 생성하고 삭제할 수 있게 해주는 함수들이다.</p>
-
-<h2 id="mmap">MMAP</h2>
-
-<p><code class="language-plaintext highlighter-rouge">mmap()</code>함수는 Memory Map이라는 뜻을 가지며, 말 그대로 메모리를 매핑하여 가상 메모리의 영역을 생성하고 삭제할 수 있게 해준다.
-커널에 새 가상메모리 영역을 생성해 줄 것을 요청하며, 객체들을 이 영역으로 매핑할 수 있다.</p>
-
-<p>이를 사용해 성공적으로 파일을 메모리에 매핑한다면, 해당 메모리의 주소값이 반환된다.<br />
-<code class="language-plaintext highlighter-rouge">mmap()</code>함수는 다음의 6 인자들을 받는다.  <br />
-<code class="language-plaintext highlighter-rouge">void *address</code>, <code class="language-plaintext highlighter-rouge">size_t length</code>, <code class="language-plaintext highlighter-rouge">int protect</code>, <code class="language-plaintext highlighter-rouge">int flags</code>, <code class="language-plaintext highlighter-rouge">int filedes</code>, <code class="language-plaintext highlighter-rouge">off_t offset</code></p>
-
-<h3 id="address-1">address</h3>
-
-<p>이 인자는 매핑에 선호하는 시작 주소를 함수로 전달하며, 대개 <code class="language-plaintext highlighter-rouge">NULL</code>로 명시한다.<br />
-다른 매핑이 해당 주소에 존재하지 않다면 커널은 근처의 페이지 영역을 선택하여 매핑을 한다.
-해당 인자에 <code class="language-plaintext highlighter-rouge">NULL</code>이 패스된다면 커널은 적절한 위치를 찾아 매핑을 한다.</p>
-
-<h3 id="length-1">length</h3>
-
-<p>매핑 될 바이트의 수이다.</p>
-
-<h3 id="protect-1">protect</h3>
-
-<p>이 인자는 어떤 접근이 허용되는지 제어하기 위해 사용된다.<br />
-파일에 대응되는 메모리 영역의 보호 특성을 결정하기 위해 다음의 비트들이 있으며,
-해당 비트들의 논리 OR 형태로도 사용 가능하다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">PROT_EXEC</code> : 실행 가능한 페이지<br />
-<code class="language-plaintext highlighter-rouge">PROT_READ</code> : 읽기 가능한 페이지<br />
-<code class="language-plaintext highlighter-rouge">PROT_WRITE</code> : 쓰기 가능한 페이지<br />
-<code class="language-plaintext highlighter-rouge">PROT_NONE</code> : 접근 불가능한 페이지</p>
-
-<h3 id="flags-1">flags</h3>
-
-<p>매핑의 유형과 동작 구성 요소를 결정하는 값이다.
-이는 대응되는 페이지 복사본에 대한 수정이 해당 프로세스에서만 보일 것인지, 아니면 다른 참조하는 프로세스와 공유할 것인지를 설정한다.</p>
-
-<p><code class="language-plaintext highlighter-rouge">MAP_SHARED</code> : 이 플래그는 매핑을 다른 모든 프로세스들과 공유하기 위해 사용된다. 매핑된 영역에 대한 수정은 파일에 다시 쓰여진다.<br />
-<code class="language-plaintext highlighter-rouge">MAP_PRIVATE</code> : 해당 플래그가 사용되면 매핑은 다른 프로세스들에게 보이지 않으며, 변경점들 또한 파일에 쓰여지지 않는다.<br />
-<code class="language-plaintext highlighter-rouge">MAP_ANONYMOUS || MAP_ANON</code> : 익명의 매핑을 만들며, 파일 디스크립터로 인식하지 않는다. 어떠한 파일에도 연결되지 않으며, 힙을 늘리는 방식으로 사용된다.<br />
-<code class="language-plaintext highlighter-rouge">MAP_FIXED</code> : 지정된 주소 이외의 다른 주소를 선택하지 않는다. 이 때, 지정된 주소가 사용될 수 없다면 mmap()은 실패한다.</p>
-
-<h3 id="filedes">filedes</h3>
-
-<p>매핑될 파일 디스크립터이다.</p>
-
-<h3 id="offset-1">offset</h3>
-
-<p>매핑할 때, 옮길 데이터의 시작점을 지정하는 인수이다.</p>
-
-<h2 id="munmap">MUNMAP</h2>
-
-<p><code class="language-plaintext highlighter-rouge">munmap()</code>함수는 가상메모리의 영역들을 삭제한다.</p>
-
-<p>인수로는 <code class="language-plaintext highlighter-rouge">void *start</code>와 <code class="language-plaintext highlighter-rouge">size_t length</code>를 받으며,
-이는 가상주소 <code class="language-plaintext highlighter-rouge">start</code>부터 <code class="language-plaintext highlighter-rouge">length</code>바이트로 이루어진 영역을 삭제하라는 말이다.<br />
-<b>이후, 삭제된 영역으로의 참조는 세그먼트 오류를 발생시킨다.</b></p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="devlog" /><category term="Computer_Science" /></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
+List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#mmap" id="markdown-toc-mmap">MMAP</a>    <ul>
       <li><a href="#address-1" id="markdown-toc-address-1">address</a></li>
       <li><a href="#length-1" id="markdown-toc-length-1">length</a></li>
@@ -441,4 +336,377 @@ While I’ve tried to find a multi-language solution, most showed drastically wo
 If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="http://localhost:4000/example/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/example/example-content-iii</id><content type="html" xml:base="http://localhost:4000/example/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
+Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
+so that your content remains compatible with other Jekyll themes.</p>
+
+<h2 id="large-tables">Large Tables</h2>
+
+<table class="scroll-table">
+  <thead>
+    <tr>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+      <th>Default aligned</th>
+      <th style="text-align: left">Left aligned</th>
+      <th style="text-align: center">Center aligned</th>
+      <th style="text-align: right">Right aligned</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+      <td>First body part</td>
+      <td style="text-align: left">Second cell</td>
+      <td style="text-align: center">Third cell</td>
+      <td style="text-align: right">fourth cell</td>
+    </tr>
+    <tr>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+      <td>Second line</td>
+      <td style="text-align: left">foo</td>
+      <td style="text-align: center"><strong>strong</strong></td>
+      <td style="text-align: right">baz</td>
+    </tr>
+    <tr>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+      <td>Third line</td>
+      <td style="text-align: left">quux</td>
+      <td style="text-align: center">baz</td>
+      <td style="text-align: right">bar</td>
+    </tr>
+    <tr>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Second body</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>2 line</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+    <tr>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+      <td>Footer row</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: right"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="code-blocks">Code blocks</h2>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
+
+<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
+<span class="c1">// arguments</span>
+<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
+
+<span class="c1">// Call the function</span>
+<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
+<span class="c1">// &gt; 8</span>
+</code></pre></div></div>
+
+<h2 id="math">Math</h2>
+<p>Lorem ipsum \(f(x) = x^2\).</p>
+
+\[\begin{aligned}
+  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
+            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
+            &amp;= (x_1, \ldots, x_n)
+               \left(\begin{array}{ccc}
+                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
+                 \vdots          &amp; \ddots &amp; \vdots         \\
+                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
+               \end{array}\right)
+               \left(\begin{array}{c}
+                 y_1    \\
+                 \vdots \\
+                 y_n
+               \end{array}\right)
+\end{aligned}\]
+
+<h2 id="message-boxes">Message boxes</h2>
+<p class="message"><strong>NOTE</strong>: You can add a message box.</p>
+
+<h2 id="large-text">Large text</h2>
+<p class="lead">You can add large text.</p>
+
+<h2 id="large-images">Large images</h2>
+<p><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" /></p>
+
+<h2 id="captions-to-images">Captions to images</h2>
+<p class="figure"><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" />
+A caption to an image.</p>
+
+<h2 id="large-quotes">Large quotes</h2>
+<blockquote class="lead">
+  <p>You can make a quote “pop out”.</p>
+</blockquote>
+
+<h2 id="faded-text">Faded text</h2>
+<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content II</title><link href="http://localhost:4000/example/2017-11-23-example-content-ii/" rel="alternate" type="text/html" title="Example Content II" /><published>2017-11-23T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/example/example-content-ii</id><content type="html" xml:base="http://localhost:4000/example/2017-11-23-example-content-ii/"><![CDATA[<p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
+
+<p>There should be whitespace between paragraphs.</p>
+
+<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
+
+<p><a href="another-page">Link to another page</a>.</p>
+
+<ul class="large-only" id="markdown-toc">
+  <li><a href="#header-2" id="markdown-toc-header-2">Header 2</a>    <ul>
+      <li><a href="#header-3" id="markdown-toc-header-3">Header 3</a>        <ul>
+          <li><a href="#header-4" id="markdown-toc-header-4">Header 4</a>            <ul>
+              <li><a href="#header-5" id="markdown-toc-header-5">Header 5</a>                <ul>
+                  <li><a href="#header-6" id="markdown-toc-header-6">Header 6</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#theres-a-horizontal-rule-below-this" id="markdown-toc-theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</a></li>
+      <li><a href="#here-is-an-unordered-list" id="markdown-toc-here-is-an-unordered-list">Here is an unordered list:</a></li>
+      <li><a href="#and-an-ordered-list" id="markdown-toc-and-an-ordered-list">And an ordered list:</a></li>
+      <li><a href="#and-a-nested-list" id="markdown-toc-and-a-nested-list">And a nested list:</a></li>
+      <li><a href="#small-image" id="markdown-toc-small-image">Small image</a></li>
+      <li><a href="#large-image" id="markdown-toc-large-image">Large image</a></li>
+      <li><a href="#definition-lists" id="markdown-toc-definition-lists">Definition lists</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="header-2">Header 2</h2>
+
+<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+
+<h3 id="header-3">Header 3</h3>
+
+<blockquote>
+  <p>This is a blockquote following a header.</p>
+
+  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
+</blockquote>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
+<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nf">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
+  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
+<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
+  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h4 id="header-4">Header 4</h4>
+
+<ul>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+  <li>This is an unordered list following a header.</li>
+</ul>
+
+<h5 id="header-5">Header 5</h5>
+
+<ol>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+  <li>This is an ordered list following a header.</li>
+</ol>
+
+<h6 id="header-6">Header 6</h6>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">head1</th>
+      <th style="text-align: left">head two</th>
+      <th style="text-align: left">three</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good swedish fish</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">out of stock</td>
+      <td style="text-align: left">good and plenty</td>
+      <td style="text-align: left">nice</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
+      <td style="text-align: left">hmm</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ok</td>
+      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
+      <td style="text-align: left">yumm</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
+
+<hr />
+
+<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
+
+<ul>
+  <li>Item foo</li>
+  <li>Item bar</li>
+  <li>Item baz</li>
+  <li>Item zip</li>
+</ul>
+
+<h3 id="and-an-ordered-list">And an ordered list:</h3>
+
+<ol>
+  <li>Item one</li>
+  <li>Item two</li>
+  <li>Item three</li>
+  <li>Item four</li>
+</ol>
+
+<h3 id="and-a-nested-list">And a nested list:</h3>
+
+<ul>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item
+        <ul>
+          <li>level 3 item</li>
+          <li>level 3 item</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item
+    <ul>
+      <li>level 2 item</li>
+      <li>level 2 item</li>
+    </ul>
+  </li>
+  <li>level 1 item</li>
+</ul>
+
+<h3 id="small-image">Small image</h3>
+
+<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
+
+<h3 id="large-image">Large image</h3>
+
+<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
+
+<h3 id="definition-lists">Definition lists</h3>
+
+<dl>
+  <dt>Name</dt>
+  <dd>Godzilla</dd>
+  <dt>Born</dt>
+  <dd>1952</dd>
+  <dt>Birthplace</dt>
+  <dd>Japan</dd>
+  <dt>Color</dt>
+  <dd>Green</dd>
+</dl>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
+</code></pre></div></div>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[A page showing how regular markdown content is styled in Hydejack.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-ii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

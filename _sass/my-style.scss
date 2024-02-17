@@ -1,17 +1,36 @@
-.dl-table {
-  a {
-    @supports ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      text-underline-offset: .8rem;
-    }
-    @supports not ((text-decoration-thickness: initial) and (text-underline-offset: initial)) {
-      padding-bottom: .45rem;
-    }
-  }
+// applause-button
 
-  .btn, .gumroad-button  {
-    margin: 1rem 0;
+applause-button {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+
+  .count-container {
+    color: inherit;
   }
 }
+
+.clap-count {
+  @extend h4;
+  color: var(--accent-color);
+  display: none;
+
+  svg {
+    height: 1em;
+    vertical-align: middle;
+    width: 1em;
+  }
+
+  .flat {
+    fill: var(--body-bg);
+  }
+
+  .outline {
+    fill: var(--accent-color);
+  }
+}
+
+
 
 //sidebar
 
@@ -58,3 +77,16 @@
   }
 }
 
+
+
+// Image centering
+
+.text-align-center {
+  text-align: center;
+}
+
+img.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

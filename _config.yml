@@ -51,8 +51,18 @@ author:
 menu:
   - title: Devlog
     url: /devlog/
-  - title: Posts
-    url: /posts/
+  - title: CS
+    url: /cs/
+    submenu: 
+      - title: DataStructure
+        url: /datastructure/
+      - title: Algorithm
+        url: /algorithm/
+  - title: Coding
+    url: /coding/
+    submenu: 
+      - title: BaekJoon
+        url: https://github.com/jaenam615/BaekjoonHub/tree/main/%EB%B0%B1%EC%A4%80
   - title: Documentation
     url: /docs/
   - title: About

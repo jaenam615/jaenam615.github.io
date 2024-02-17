@@ -108,7 +108,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2024-02-17T00:39:10+09:00',
+    INDEX_KEY: 'index--2024-02-17T14:10:39+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -349,7 +349,7 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
     
 
 
-  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/computer_science,/os/2024-02-08-exceptional_control_flow/" class="flip-title"><span>Exceptional Control Flow</span></a>  <time class="faded fine" datetime="2024-02-08T19:30:00+09:00">08 Feb 2024</time></li>                        <li class="h4">  <a href="/computer_science/2024-02-07-free_list/" class="flip-title"><span>Explicit & Implicit Free List</span></a>  <time class="faded fine" datetime="2024-02-07T21:00:00+09:00">07 Feb 2024</time></li>                        <li class="h4">  <a href="/devlog/computer_science/2024-02-07-allocator/" class="flip-title"><span>동적 메모리 할당기</span></a>  <time class="faded fine" datetime="2024-02-07T20:00:00+09:00">07 Feb 2024</time></li>            </ul></aside>
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/computer_science,/os/2024-02-08-exceptional_control_flow/" class="flip-title"><span>Exceptional Control Flow</span></a>  <time class="faded fine" datetime="2024-02-08T19:30:00+09:00">08 Feb 2024</time></li>                        <li class="h4">  <a href="/computer_science/2024-02-07-free_list/" class="flip-title"><span>Explicit & Implicit Free List</span></a>  <time class="faded fine" datetime="2024-02-07T21:00:00+09:00">07 Feb 2024</time></li>                        <li class="h4">  <a href="/computer_science/2024-02-07-allocator/" class="flip-title"><span>동적 메모리 할당기</span></a>  <time class="faded fine" datetime="2024-02-07T20:00:00+09:00">07 Feb 2024</time></li>            </ul></aside>
 
   
 
@@ -448,58 +448,145 @@ html{--accent-color: rgb(79,177,186);--accent-color-faded: rgba(79, 177, 186, 0.
   <nav class="sidebar-nav heading" role="navigation">
     <span class="sr-only">Navigation:</span>
 <ul>
-  
     
-      
-      <li>
-        <a
-          id="_drawer--opened"
-          href="/devlog/"
-          class="sidebar-nav-item "
-          
-        >
-          Devlog
-        </a>
-      </li>
     
-      
-      <li>
-        <a
-          
-          href="/posts/"
-          class="sidebar-nav-item "
-          
-        >
-          Posts
-        </a>
-      </li>
     
-      
-      <li>
-        <a
-          
-          href="/docs/"
-          class="sidebar-nav-item "
-          
-        >
-          Documentation
-        </a>
-      </li>
     
-      
-      <li>
-        <a
-          
-          href="/about/"
-          class="sidebar-nav-item "
-          
-        >
-          About
-        </a>
-      </li>
+    <li>
+        <div class="menu-wrapper">
+            
+            <a
+                    id="_drawer--opened"
+                    href="/devlog/"
+                    class="sidebar-nav-item "
+                    
+            >
+                Devlog
+            </a>
+        </div>
+        
+    </li>
     
-  
+    
+    
+    <li>
+        <div class="menu-wrapper">
+            
+            <button class="spread-btn" onclick="javascript:spread(11)">
+                <span id="spread-icon-11" class="material-icons">arrow_right</span>
+            </button>
+            
+            <a
+                    
+                    href="/cs/"
+                    class="sidebar-nav-item "
+                    
+            >
+                CS
+            </a>
+        </div>
+        
+        <div class="menu-wrapper">
+            <input type="checkbox" id="folder-checkbox-11">
+            <ul>
+                
+                <li>
+                    <a
+                            class="sidebar-nav-item "
+                            href="/datastructure/"
+                    >
+                        DataStructure
+                    </a>
+                </li>
+                
+                <li>
+                    <a
+                            class="sidebar-nav-item "
+                            href="/algorithm/"
+                    >
+                        Algorithm
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </li>
+    
+    
+    
+    <li>
+        <div class="menu-wrapper">
+            
+            <button class="spread-btn" onclick="javascript:spread(12)">
+                <span id="spread-icon-12" class="material-icons">arrow_right</span>
+            </button>
+            
+            <a
+                    
+                    href="/coding/"
+                    class="sidebar-nav-item "
+                    
+            >
+                Coding
+            </a>
+        </div>
+        
+        <div class="menu-wrapper">
+            <input type="checkbox" id="folder-checkbox-12">
+            <ul>
+                
+                <li>
+                    <a
+                            class="sidebar-nav-item "
+                            href="https://github.com/jaenam615/BaekjoonHub/tree/main/%EB%B0%B1%EC%A4%80"
+                    >
+                        BaekJoon
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </li>
+    
+    
+    
+    <li>
+        <div class="menu-wrapper">
+            
+            <a
+                    
+                    href="/docs/"
+                    class="sidebar-nav-item "
+                    
+            >
+                Documentation
+            </a>
+        </div>
+        
+    </li>
+    
+    
+    
+    <li>
+        <div class="menu-wrapper">
+            
+            <a
+                    
+                    href="/about/"
+                    class="sidebar-nav-item "
+                    
+            >
+                About
+            </a>
+        </div>
+        
+    </li>
+    
+    
 </ul>
+
 
   </nav>
 
