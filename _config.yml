@@ -55,9 +55,9 @@ menu:
     url: /cs/
     submenu: 
       - title: DataStructure
-        url: /cs/datastructure/
+        url: /datastructure/
       - title: Algorithm
-        url: /cs/algorithm/
+        url: /algorithm/
   - title: Coding
     url: /coding/
     submenu: 

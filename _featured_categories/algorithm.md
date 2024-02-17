@@ -2,7 +2,6 @@
 layout: list
 title: Algorithm
 slug: algorithm
-categories : [cs]
 description: > 
     알고리즘
 
