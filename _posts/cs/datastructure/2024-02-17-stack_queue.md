@@ -5,10 +5,8 @@ date: 2024-02-17 15:00:00 +0900
 categories: [cs,datastructure]
 tags: []
 ---
-* 스택
-## Overflow/Underflow
-* 큐
-{:toc .large-only}
+* toc
+{:toc}
 
 컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.
 

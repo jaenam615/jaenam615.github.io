@@ -5,11 +5,8 @@ date: 2024-02-17 20:00:00 +0900
 categories: [cs,algorithm]
 tags: []
 ---
-* 완전탐색
-## 브루트포스
-## 순열과 조합
-## 백트래킹
-{:toc .large-only}
+* toc
+{:toc}
 
 ## 완전탐색
 

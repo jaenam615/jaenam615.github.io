@@ -107,7 +107,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   w._search = {
     DATA_URL: '/assets/sitedata.json?no-cache',
     STORAGE_KEY: 'mini-search/',
-    INDEX_KEY: 'index--2024-02-17T18:24:12+09:00',
+    INDEX_KEY: 'index--2024-02-17T22:53:42+09:00',
   };
   w._clapButton = true;
 }(window);</script>
@@ -141,6 +141,38 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <script src="/assets/js/sidebar-folder.js"></script>
 
+<script type="module">
+    document.querySelector('hy-push-state').addEventListener('load', () => {
+        let tocElement = document.getElementById("markdown-toc");
+  
+        if(tocElement){
+            let affixedDiv = document.createElement("div");
+            affixedDiv.style.position = "relative";
+            affixedDiv.style.top = "-1rem";
+            tocElement.parentNode.insertBefore(affixedDiv, tocElement);
+  
+            let headerList = document.getElementsByClassName("permalink");
+            let prevElement;
+            window.addEventListener("scroll", () => {
+                let hurdleTop = affixedDiv.getBoundingClientRect().top;
+                if(hurdleTop <= 0) tocElement.classList.add("affix");
+                else tocElement.classList.remove("affix");
+  
+                for(let i=0;i<headerList.length;i++){
+                    if(headerList[i].getBoundingClientRect().top >= 0){
+                    prevElement?.style.removeProperty("font-weight");
+                    let tocId = "markdown-toc-" + headerList[i].parentNode.id;
+                    prevElement = document.getElementById(tocId);
+                    prevElement.style.fontWeight = "bold";;
+  
+                    break;
+                    }
+                }
+            });
+        }
+    });
+    </script>
+  
 
 </head>
 
@@ -214,7 +246,7 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 
 <img
   
-    src="../assets/img/snail.png"
+    src="(https//github.com/jaenam615/jaenam615.github.io/assets/img/snail.png)"
     
     
   
