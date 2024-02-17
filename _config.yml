@@ -46,6 +46,7 @@ author:
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
   github: jaenam615
+  picture: /assets/img/snail.png
 
 # Add links to the sidebar.
 menu:
@@ -339,6 +340,7 @@ plugins:
   - jekyll-titles-from-headings
   - jekyll-include-cache
   - jekyll-last-modified-at
+  - jekyll-avatar
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------
