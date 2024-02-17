@@ -25,12 +25,33 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 
 
 
-  <meta name="robots" content="noindex">
 
 
+  
+    
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>스택과 큐 | Jae’s Blog</title>
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="스택과 큐" />
+<meta name="author" content="Jaehee Nam" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<meta property="og:description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<link rel="canonical" href="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/" />
+<meta property="og:url" content="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/" />
+<meta property="og:site_name" content="Jae’s Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-02-17T15:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="스택과 큐" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-17T18:24:04+09:00","datePublished":"2024-02-17T15:00:00+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"스택과 큐","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/"}</script>
+<!-- End Jekyll SEO tag -->
 
-  <meta http-equiv="refresh" content="0; url=http://localhost:4000/abouthydejack/">
-  <title>Redirecting…</title>
+
+  
+
+  
 
 
 
@@ -52,7 +73,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/download/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jae&apos;s Blog" />
 
@@ -154,7 +175,7 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 
   <main
   id="_main"
-  class="content layout-redirect"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -165,16 +186,243 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
       <li>
         
           <span>/</span>
-          <span>download</span>
+          
+          
+          <a href="/cs/">cs</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/cs/datastructure/">datastructure</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2024-02-17-stack_queue</span>
         
       </li>
     
   
 </ul></nav>
-  <div class="page">
-  <h1 class="page-title">Redirecting…</h1>
-  <p class="lead"><a href="http://localhost:4000/abouthydejack/">http://localhost:4000/abouthydejack/</a></p>
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-cs-datastructure-stack_queue" class="page post mb6" role="article">
+  <header>
+    <h1 class="post-title flip-project-title">
+      
+        스택과 큐
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-02-17T15:00:00+09:00">17 Feb 2024</time> in <a href="/cs/" class="flip-title">Computer Science</a> / <a href="/datastructure/" class="flip-title">Data Structure</a> 
+      </span>
+      
+        
+          
+          
+          
+        
+      
+    </div>
+
+    
+    
+
+    
+
+
+
+  <div class="hr pb0"></div>
+
+
+  </header>
+
+  
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#스택" id="markdown-toc-스택">스택</a>    <ul>
+      <li><a href="#overflowunderflow-1" id="markdown-toc-overflowunderflow-1">Overflow/Underflow</a></li>
+    </ul>
+  </li>
+  <li><a href="#큐" id="markdown-toc-큐">큐</a></li>
+</ul>
+
+<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
+
+<h2 id="스택">스택</h2>
+<p><br />
+  스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
+이러한 삽입과 삭제 구조로 인해 스택에서의 데이터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
+이를 <b>선입후출</b> 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
+스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
+
+<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />      <br />
+스택의 푸시/팝 연산 <i>출처: https://www.programiz.com/dsa/stack</i></p>
+
+<p>일반적으로 가장 위 데이터가 쌓여있는 위치를 Top이라고 부른다.</p>
+
+<h3 id="overflowunderflow-1">Overflow/Underflow</h3>
+<p><br />
+  오버플로우는 스택에 삽입 연산을 수행할 때 발생하는 문제이며, 이는 스택을 위해 할당된 저장 공간이 초과되어 더 이상 데이터를 삽입할 수 없는 상황을 말한다.</p>
+
+<p>반대로, 언더플로우는 삭제 연산을 수행할 때 발생하며, 스택에 데이터가 없는 상태에서 삭제를 시도할 때 일어나는 문제이다.</p>
+
+<h2 id="큐">큐</h2>
+<p><br />
+  큐는 데이터의 삽입과 삭제가 서로 다른 쪽에서 이루어지는 선형 자료구조이다. 
+그럼으로, 스택과는 달리 삽입된 순서로 데이터가 삭제되며 이는 <b>선입선출</b> 형식이며, 영어로 <b>First In First Out</b> 줄여서 <b>FIFO</b>라고 한다.</p>
+
+<p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
+큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
+데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>
+
+  
+</article>
+
+
+
+  <hr class="dingbat related mb6" />
+
+
+
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="../assets/img/snail.png"
+    
+    
+  
+  alt="Jaehee Nam"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>수양하는 코린이입니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/jaenam615" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
 </div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/2024-02-16-array_linkedlist/" class="flip-title"><span>Array_linkedlist</span></a>  <time class="faded fine" datetime="2024-02-16T00:00:00+09:00">16 Feb 2024</time></li>                        <li class="h4">  <a href="/2024-02-15-ethernet/" class="flip-title"><span>Ethernet</span></a>  <time class="faded fine" datetime="2024-02-15T00:00:00+09:00">15 Feb 2024</time></li>                        <li class="h4">  <a href="/computer_science,/os/2024-02-08-exceptional_control_flow/" class="flip-title"><span>Exceptional Control Flow</span></a>  <time class="faded fine" datetime="2024-02-08T19:30:00+09:00">08 Feb 2024</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="jaenam615/jaenam615.github.io"
+        data-repo-id="R_kgDOLMBWpw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLMBWp84CdInI"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+</script>
+</aside>
+
+
+  
+
 
   
 <footer class="content" role="contentinfo">
@@ -409,6 +657,84 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 <hr class="sr-only" hidden />
 
 </hy-push-state>
+
+
+  <!--[if gt IE 10]><!---->
+  <script nomodule>!function(){var t,n=document.createElement("script");!("noModule"in n)&&"onbeforeload"in n&&(t=!1,document.addEventListener("beforeload",function(e){if(e.target===n)t=!0;else if(!e.target.hasAttribute("nomodule")||!t)return;e.preventDefault()},!0),n.type="module",n.src=".",document.head.appendChild(n),n.remove())}();
+</script>
+  <script src="/assets/js/hydejack-9.1.6.js" type="module"></script>
+  <script src="/assets/js/LEGACY-hydejack-9.1.6.js" nomodule defer></script>
+  
+
+  
+
+<!--<![endif]-->
+  <!-- <script>
+  document.querySelector('hy-push-state').setAttribute('prefetch', '');
+
+  document.querySelectorAll('.sidebar a[href^="/"]').forEach(function (el) { 
+    el.addEventListener('click', function (e) {
+      if (el.pathname === window.location.pathname) {
+        e.preventDefault();
+        e.stopPropagation();
+        document.querySelector('hy-drawer').close();
+      }
+    });
+  });
+</script> -->
+
+<!--
+Code for integrating CloudFlare's email protection with Hydejack's single page app loading.
+-->
+<script>
+  document.getElementById('_pushState').addEventListener('hy-push-state-after', function (e) {
+    function e(e){
+      (console.error?console.error:console.log).call(console,e)
+    }
+
+    function t(e){
+      return l.innerHTML='<a href="'+e.replace(/"/g,"&quot;")+'"></a>',l.childNodes[0].getAttribute("href")
+    }
+
+    function r(e,t){
+      var r=e.substr(t,2);return parseInt(r,16)
+    }
+
+    function n(e,n){
+      for(var o="",c=r(e,n),a=n+2;a<e.length;a+=2){
+        var l=r(e,a)^c;
+        o+=String.fromCharCode(l)
+      }
+      return t(o)
+    }
+
+    var o="/cdn-cgi/l/email-protection#",
+        c=".__cf_email__",
+        a="data-cfemail",
+        l=document.createElement("div");
+
+    !function(){
+      for(var t=document.getElementsByTagName("a"),r=0;r<t.length;r++)
+        try{
+          var c=t[r],a=c.href.indexOf(o);
+          a>-1&&(c.href="mailto:"+n(c.href,a+o.length))
+        }catch(t){
+          e(t)
+        }
+    }(),
+    function(){
+      for(var t=document.querySelectorAll(c),r=0;r<t.length;r++)
+        try{
+          var o=t[r],l=n(o.getAttribute(a),0),i=document.createTextNode(l);
+          o.parentNode.replaceChild(i,o)
+        }catch(t){
+          e(t)
+        }
+    }()
+  });
+</script>
+
+
 
 
 

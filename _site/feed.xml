@@ -1,5 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-17T18:00:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-17T18:24:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">스택과 큐</title><link href="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/" rel="alternate" type="text/html" title="스택과 큐" /><published>2024-02-17T15:00:00+09:00</published><updated>2024-02-17T18:24:04+09:00</updated><id>http://localhost:4000/cs/datastructure/stack_queue</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/"><![CDATA[<ul class="large-only" id="markdown-toc">
+  <li><a href="#스택" id="markdown-toc-스택">스택</a>    <ul>
+      <li><a href="#overflowunderflow-1" id="markdown-toc-overflowunderflow-1">Overflow/Underflow</a></li>
+    </ul>
+  </li>
+  <li><a href="#큐" id="markdown-toc-큐">큐</a></li>
+</ul>
+
+<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
+
+<h2 id="스택">스택</h2>
+<p><br />
+  스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
+이러한 삽입과 삭제 구조로 인해 스택에서의 데이터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
+이를 <b>선입후출</b> 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
+스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
+
+<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />      <br />
+스택의 푸시/팝 연산 <i>출처: https://www.programiz.com/dsa/stack</i></p>
+
+<p>일반적으로 가장 위 데이터가 쌓여있는 위치를 Top이라고 부른다.</p>
+
+<h3 id="overflowunderflow-1">Overflow/Underflow</h3>
+<p><br />
+  오버플로우는 스택에 삽입 연산을 수행할 때 발생하는 문제이며, 이는 스택을 위해 할당된 저장 공간이 초과되어 더 이상 데이터를 삽입할 수 없는 상황을 말한다.</p>
+
+<p>반대로, 언더플로우는 삭제 연산을 수행할 때 발생하며, 스택에 데이터가 없는 상태에서 삭제를 시도할 때 일어나는 문제이다.</p>
+
+<h2 id="큐">큐</h2>
+<p><br />
+  큐는 데이터의 삽입과 삭제가 서로 다른 쪽에서 이루어지는 선형 자료구조이다. 
+그럼으로, 스택과는 달리 삽입된 순서로 데이터가 삭제되며 이는 <b>선입선출</b> 형식이며, 영어로 <b>First In First Out</b> 줄여서 <b>FIFO</b>라고 한다.</p>
+
+<p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
+큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
+데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /></entry><entry><title type="html">Array_linkedlist</title><link href="http://localhost:4000/2024-02-16-array_linkedlist/" rel="alternate" type="text/html" title="Array_linkedlist" /><published>2024-02-16T00:00:00+09:00</published><updated>2024-02-17T18:12:13+09:00</updated><id>http://localhost:4000/array_linkedlist</id><content type="html" xml:base="http://localhost:4000/2024-02-16-array_linkedlist/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#ecf" id="markdown-toc-ecf">ECF</a></li>
   <li><a href="#예외상황" id="markdown-toc-예외상황">예외상황</a>    <ul>
       <li><a href="#인터럽트-1" id="markdown-toc-인터럽트-1">인터럽트</a></li>
@@ -156,21 +191,7 @@ C++ 에서는 <code class="language-plaintext highlighter-rouge">new()</code>와
 <p>묵시적 할당기는 할당된 블록이 더 이상 프로그램에 의해 사용되지 않는지 할당기가 검출할 수 있을 것을 요구하며, <br />
 이러한 검출을 통해 블록의 반환이 별도의 함수 호출 없이 이루어진다.<br />
 묵시적 할당기는 <i>garbage collector</i>라고도 알려져 있으며, 자동으로 사용하지 않는 할당된 블록을 반환하는 작업을 가비지 컬렉션이라고 부른다. <br />
-List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">스택</title><link href="http://localhost:4000/cs/datastructure/2024-02-07-stack_queue/" rel="alternate" type="text/html" title="스택" /><published>2024-02-07T20:00:00+09:00</published><updated>2024-02-17T16:41:18+09:00</updated><id>http://localhost:4000/cs/datastructure/stack_queue</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-02-07-stack_queue/"><![CDATA[<h2 class="large-only" id="큐">큐</h2>
-
-<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
-
-<h2 id="스택">스택</h2>
-
-<p>스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
-이러한 삽입과 삭제 구조로 인해 스택에서의 데이터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
-이를 <b>선입후출</b>, 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
-스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
-
-<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />
-스택의 푸시/팝 연산 <i>이미지 출처: https://www.programiz.com/dsa/stack</i></p>
-
-<h2 id="큐-1">큐</h2>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /><summary type="html"><![CDATA[큐]]></summary></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
+List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#mmap" id="markdown-toc-mmap">MMAP</a>    <ul>
       <li><a href="#address-1" id="markdown-toc-address-1">address</a></li>
       <li><a href="#length-1" id="markdown-toc-length-1">length</a></li>
@@ -350,194 +371,4 @@ While I’ve tried to find a multi-language solution, most showed drastically wo
 If you’re technically inclined, you can adopt the code located in <code class="language-plaintext highlighter-rouge">_includes/js/search-worker.js</code> to your needs. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
     </li>
   </ol>
-</div>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Example Content III</title><link href="http://localhost:4000/example/2018-06-01-example-content-iii/" rel="alternate" type="text/html" title="Example Content III" /><published>2018-06-01T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/example/example-content-iii</id><content type="html" xml:base="http://localhost:4000/example/2018-06-01-example-content-iii/"><![CDATA[<p>Hydejack offers a few additional features to markup your markdown.
-Don’t worry, these are merely CSS classes added with kramdown’s <code class="language-plaintext highlighter-rouge">{:...}</code> syntax,
-so that your content remains compatible with other Jekyll themes.</p>
-
-<h2 id="large-tables">Large Tables</h2>
-
-<table class="scroll-table">
-  <thead>
-    <tr>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-      <th>Default aligned</th>
-      <th style="text-align: left">Left aligned</th>
-      <th style="text-align: center">Center aligned</th>
-      <th style="text-align: right">Right aligned</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-      <td>First body part</td>
-      <td style="text-align: left">Second cell</td>
-      <td style="text-align: center">Third cell</td>
-      <td style="text-align: right">fourth cell</td>
-    </tr>
-    <tr>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-      <td>Second line</td>
-      <td style="text-align: left">foo</td>
-      <td style="text-align: center"><strong>strong</strong></td>
-      <td style="text-align: right">baz</td>
-    </tr>
-    <tr>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-      <td>Third line</td>
-      <td style="text-align: left">quux</td>
-      <td style="text-align: center">baz</td>
-      <td style="text-align: right">bar</td>
-    </tr>
-    <tr>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Second body</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>2 line</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-    <tr>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-      <td>Footer row</td>
-      <td style="text-align: left"> </td>
-      <td style="text-align: center"> </td>
-      <td style="text-align: right"> </td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="code-blocks">Code blocks</h2>
-
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Example can be run directly in your JavaScript console</span>
-
-<span class="c1">// Create a function that takes two arguments and returns the sum of those</span>
-<span class="c1">// arguments</span>
-<span class="kd">var</span> <span class="nx">adder</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Function</span><span class="p">(</span><span class="dl">"</span><span class="s2">a</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">b</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">return a + b</span><span class="dl">"</span><span class="p">);</span>
-
-<span class="c1">// Call the function</span>
-<span class="nf">adder</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">);</span>
-<span class="c1">// &gt; 8</span>
-</code></pre></div></div>
-
-<h2 id="math">Math</h2>
-<p>Lorem ipsum \(f(x) = x^2\).</p>
-
-\[\begin{aligned}
-  \phi(x,y) &amp;= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
-            &amp;= \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j)            \\[2em]
-            &amp;= (x_1, \ldots, x_n)
-               \left(\begin{array}{ccc}
-                 \phi(e_1, e_1)  &amp; \cdots &amp; \phi(e_1, e_n) \\
-                 \vdots          &amp; \ddots &amp; \vdots         \\
-                 \phi(e_n, e_1)  &amp; \cdots &amp; \phi(e_n, e_n)
-               \end{array}\right)
-               \left(\begin{array}{c}
-                 y_1    \\
-                 \vdots \\
-                 y_n
-               \end{array}\right)
-\end{aligned}\]
-
-<h2 id="message-boxes">Message boxes</h2>
-<p class="message"><strong>NOTE</strong>: You can add a message box.</p>
-
-<h2 id="large-text">Large text</h2>
-<p class="lead">You can add large text.</p>
-
-<h2 id="large-images">Large images</h2>
-<p><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" /></p>
-
-<h2 id="captions-to-images">Captions to images</h2>
-<p class="figure"><img src="https://via.placeholder.com/800x100" alt="Full-width image" class="lead" width="800" height="100" />
-A caption to an image.</p>
-
-<h2 id="large-quotes">Large quotes</h2>
-<blockquote class="lead">
-  <p>You can make a quote “pop out”.</p>
-</blockquote>
-
-<h2 id="faded-text">Faded text</h2>
-<p class="faded">I’m faded, faded, faded.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[A page showing Hydejack-specific markdown content.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/example-content-iii.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+</div>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="example" /><summary type="html"><![CDATA[Version 9 is the most complete version of Hydejack yet. Modernized design, big headlines, and big new features.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
