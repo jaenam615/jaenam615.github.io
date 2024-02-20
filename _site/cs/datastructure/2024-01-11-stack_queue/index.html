@@ -25,31 +25,27 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 
 
 
-  <meta name="robots" content="noindex">
-
 
 
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Example Content II | Jae’s Blog</title>
+<title>스택과 큐 | Jae’s Blog</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Example Content II" />
+<meta property="og:title" content="스택과 큐" />
 <meta name="author" content="Jaehee Nam" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="A page showing how regular markdown content is styled in Hydejack." />
-<meta property="og:description" content="A page showing how regular markdown content is styled in Hydejack." />
-<link rel="canonical" href="http://localhost:4000/example/2017-11-23-example-content-ii/" />
-<meta property="og:url" content="http://localhost:4000/example/2017-11-23-example-content-ii/" />
+<meta name="description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<meta property="og:description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<link rel="canonical" href="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/" />
+<meta property="og:url" content="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/" />
 <meta property="og:site_name" content="Jae’s Blog" />
-<meta property="og:image" content="http://localhost:4000/assets/img/blog/example-content-ii.jpg" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-11-23T00:00:00+09:00" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/img/blog/example-content-ii.jpg" />
-<meta property="twitter:title" content="Example Content II" />
+<meta property="article:published_time" content="2024-01-11T15:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="스택과 큐" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-17T00:06:58+09:00","datePublished":"2017-11-23T00:00:00+09:00","description":"A page showing how regular markdown content is styled in Hydejack.","headline":"Example Content II","image":"http://localhost:4000/assets/img/blog/example-content-ii.jpg","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/example/2017-11-23-example-content-ii/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/example/2017-11-23-example-content-ii/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-20T22:40:49+09:00","datePublished":"2024-01-11T15:00:00+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"스택과 큐","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -77,7 +73,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/example/2017-11-23-example-content-ii/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jae&apos;s Blog" />
 
@@ -224,14 +220,23 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
           <span>/</span>
           
           
-          <a href="/example/">example</a>
+          <a href="/cs/">cs</a>
         
       </li>
     
       <li>
         
           <span>/</span>
-          <span>2017-11-23-example-content-ii</span>
+          
+          
+          <a href="/cs/datastructure/">datastructure</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2024-01-11-stack_queue</span>
         
       </li>
     
@@ -248,18 +253,18 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 
 
 
-<article id="post-example-example-content-ii" class="page post mb6" role="article">
+<article id="post-cs-datastructure-stack_queue" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
       
-        Example Content II
+        스택과 큐
       
     </h1>
 
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2017-11-23T00:00:00+09:00">23 Nov 2017</time> in <a href="/example/" class="flip-title">Example</a> 
+        <time datetime="2024-01-11T15:00:00+09:00">11 Jan 2024</time> in <a href="/cs/" class="flip-title">Computer Science</a> / <a href="/datastructure/" class="flip-title">Data Structure</a> on <span>자료구조</span>
       </span>
       
         
@@ -268,10 +273,10 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
           
             
             
-            <span class="ellipsis" data-tippy-content="Last modified at: 17 Feb 2024">
+            <span class="ellipsis" data-tippy-content="Last modified at: 20 Feb 2024">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2024-02-17T00:06:58+09:00">2024-02-17</time>
+              <time datetime="2024-02-20T22:40:49+09:00">2024-02-20</time>
             </span>
           
         
@@ -280,227 +285,53 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 
     
     
-      
-        <div class="img-wrapper lead aspect-ratio sixteen-nine flip-project-img">
-          
-
-
-<img
-  
-    src="/assets/img/blog/example-content-ii.jpg"
-  
-  alt="Example Content II"
-  
-  
-  width="864"
-  height="486"
-  loading="lazy"
-/>
-
-        </div>
-      
-      
-    
 
     
 
 
 
-  
-    <p class="note-sm" >
-      A page showing how regular markdown content is styled in Hydejack.
-
-    </p>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
 
   
-    <p>There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.</p>
-
-<p>There should be whitespace between paragraphs.</p>
-
-<p>Text can be <strong>bold</strong>, <em>italic</em>, or <del>strikethrough</del>.</p>
-
-<p><a href="another-page">Link to another page</a>.</p>
-
-<ul class="large-only" id="markdown-toc">
-  <li><a href="#header-2" id="markdown-toc-header-2">Header 2</a>    <ul>
-      <li><a href="#header-3" id="markdown-toc-header-3">Header 3</a>        <ul>
-          <li><a href="#header-4" id="markdown-toc-header-4">Header 4</a>            <ul>
-              <li><a href="#header-5" id="markdown-toc-header-5">Header 5</a>                <ul>
-                  <li><a href="#header-6" id="markdown-toc-header-6">Header 6</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li><a href="#theres-a-horizontal-rule-below-this" id="markdown-toc-theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</a></li>
-      <li><a href="#here-is-an-unordered-list" id="markdown-toc-here-is-an-unordered-list">Here is an unordered list:</a></li>
-      <li><a href="#and-an-ordered-list" id="markdown-toc-and-an-ordered-list">And an ordered list:</a></li>
-      <li><a href="#and-a-nested-list" id="markdown-toc-and-a-nested-list">And a nested list:</a></li>
-      <li><a href="#small-image" id="markdown-toc-small-image">Small image</a></li>
-      <li><a href="#large-image" id="markdown-toc-large-image">Large image</a></li>
-      <li><a href="#definition-lists" id="markdown-toc-definition-lists">Definition lists</a></li>
+    <ul id="markdown-toc">
+  <li><a href="#스택" id="markdown-toc-스택">스택</a>    <ul>
+      <li><a href="#overflowunderflow" id="markdown-toc-overflowunderflow">Overflow/Underflow</a></li>
     </ul>
   </li>
+  <li><a href="#큐" id="markdown-toc-큐">큐</a></li>
 </ul>
 
-<h2 id="header-2">Header 2</h2>
+<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
 
-<p>This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.</p>
+<h2 id="스택">스택</h2>
+<p><br />
+스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
+이러한 삽입과 삭제 구조로 인해 스택에서의 데이  터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
+이를 <b>선입후출</b> 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
+스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
 
-<h3 id="header-3">Header 3</h3>
+<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />      <br />
+스택의 푸시/팝 연산 <i>출처: https://www.programiz.com/dsa/stack</i></p>
 
-<blockquote>
-  <p>This is a blockquote following a header.</p>
+<p>일반적으로 가장 위 데이터가 쌓여있는 위치를 Top이라고 부른다.</p>
 
-  <p>When something is important enough, you do it even if the odds are not in your favor.</p>
-</blockquote>
+<h3 id="overflowunderflow">Overflow/Underflow</h3>
+<p><br />
+오버플로우는 스택에 삽입 연산을 수행할 때 발생하는 문제이며, 이는 스택을 위해 할당된 저장 공간이 초과되어 더 이상 데이터를 삽입할 수 없는 상황을 말한다.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Javascript code with syntax highlighting.</span>
-<span class="kd">var</span> <span class="nx">fun</span> <span class="o">=</span> <span class="kd">function</span> <span class="nf">lang</span><span class="p">(</span><span class="nx">l</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">dateformat</span><span class="p">.</span><span class="nx">i18n</span> <span class="o">=</span> <span class="nf">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">./lang/</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">l</span><span class="p">)</span>
-  <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<p>반대로, 언더플로우는 삭제 연산을 수행할 때 발생하며, 스택에 데이터가 없는 상태에서 삭제를 시도할 때 일어나는 문제이다.</p>
 
-<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Ruby code with syntax highlighting</span>
-<span class="no">GitHubPages</span><span class="o">::</span><span class="no">Dependencies</span><span class="p">.</span><span class="nf">gems</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">gem</span><span class="p">,</span> <span class="n">version</span><span class="o">|</span>
-  <span class="n">s</span><span class="p">.</span><span class="nf">add_dependency</span><span class="p">(</span><span class="n">gem</span><span class="p">,</span> <span class="s2">"= </span><span class="si">#{</span><span class="n">version</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
-<span class="k">end</span>
-</code></pre></div></div>
+<h2 id="큐">큐</h2>
+<p><br />
+큐는 데이터의 삽입과 삭제가 서로 다른 쪽에서 이루어지는 선형 자료구조이다. 
+그럼으로, 스택과는 달리 삽입된 순서로 데이터가 삭제되며 이는 <b>선입선출</b> 형식이며, 영어로 <b>First In First Out</b> 줄여서 <b>FIFO</b>라고 한다.</p>
 
-<h4 id="header-4">Header 4</h4>
-
-<ul>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-  <li>This is an unordered list following a header.</li>
-</ul>
-
-<h5 id="header-5">Header 5</h5>
-
-<ol>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-  <li>This is an ordered list following a header.</li>
-</ol>
-
-<h6 id="header-6">Header 6</h6>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">head1</th>
-      <th style="text-align: left">head two</th>
-      <th style="text-align: left">three</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good swedish fish</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">out of stock</td>
-      <td style="text-align: left">good and plenty</td>
-      <td style="text-align: left">nice</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">oreos</code></td>
-      <td style="text-align: left">hmm</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">ok</td>
-      <td style="text-align: left">good <code class="language-plaintext highlighter-rouge">zoute</code> drop</td>
-      <td style="text-align: left">yumm</td>
-    </tr>
-  </tbody>
-</table>
-
-<h3 id="theres-a-horizontal-rule-below-this">There’s a horizontal rule below this.</h3>
-
-<hr />
-
-<h3 id="here-is-an-unordered-list">Here is an unordered list:</h3>
-
-<ul>
-  <li>Item foo</li>
-  <li>Item bar</li>
-  <li>Item baz</li>
-  <li>Item zip</li>
-</ul>
-
-<h3 id="and-an-ordered-list">And an ordered list:</h3>
-
-<ol>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-  <li>Item four</li>
-</ol>
-
-<h3 id="and-a-nested-list">And a nested list:</h3>
-
-<ul>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item
-        <ul>
-          <li>level 3 item</li>
-          <li>level 3 item</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item
-    <ul>
-      <li>level 2 item</li>
-      <li>level 2 item</li>
-    </ul>
-  </li>
-  <li>level 1 item</li>
-</ul>
-
-<h3 id="small-image">Small image</h3>
-
-<p><img src="https://assets-cdn.github.com/images/icons/emoji/octocat.png" alt="" /></p>
-
-<h3 id="large-image">Large image</h3>
-
-<p><img src="https://guides.github.com/activities/hello-world/branching.png" alt="" /></p>
-
-<h3 id="definition-lists">Definition lists</h3>
-
-<dl>
-  <dt>Name</dt>
-  <dd>Godzilla</dd>
-  <dt>Born</dt>
-  <dd>1952</dd>
-  <dt>Birthplace</dt>
-  <dd>Japan</dd>
-  <dt>Color</dt>
-  <dd>Green</dd>
-</dl>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this. Or is it?
-</code></pre></div></div>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The final element.
-</code></pre></div></div>
+<p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
+큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
+데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>
 
   
 </article>

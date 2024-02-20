@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T20:39:25+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T22:57:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">완전탐색</title><link href="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/" rel="alternate" type="text/html" title="완전탐색" /><published>2024-02-17T20:00:00+09:00</published><updated>2024-02-20T17:06:51+09:00</updated><id>http://localhost:4000/cs/algorithm/exhaustive-search</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/"><![CDATA[<ul id="markdown-toc">
   <li><a href="#완전탐색" id="markdown-toc-완전탐색">완전탐색</a></li>
 </ul>
@@ -25,42 +25,7 @@
 </ul>
 
 <p>선형 구조를 완전 탐색하는 순차 탐색 방식과 비선형 구조를 완전 탐색하는 깊이 우선 탐색(DFS)과 너비 우선 탐색(BFS)이<br />
-완전 탐색에 사용되는 가장 기본적인 도구들이다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /></entry><entry><title type="html">스택과 큐</title><link href="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/" rel="alternate" type="text/html" title="스택과 큐" /><published>2024-02-17T15:00:00+09:00</published><updated>2024-02-17T22:44:16+09:00</updated><id>http://localhost:4000/cs/datastructure/stack_queue</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-02-17-stack_queue/"><![CDATA[<ul id="markdown-toc">
-  <li><a href="#스택" id="markdown-toc-스택">스택</a>    <ul>
-      <li><a href="#overflowunderflow" id="markdown-toc-overflowunderflow">Overflow/Underflow</a></li>
-    </ul>
-  </li>
-  <li><a href="#큐" id="markdown-toc-큐">큐</a></li>
-</ul>
-
-<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
-
-<h2 id="스택">스택</h2>
-<p><br />
-스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
-이러한 삽입과 삭제 구조로 인해 스택에서의 데이터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
-이를 <b>선입후출</b> 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
-스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
-
-<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />      <br />
-스택의 푸시/팝 연산 <i>출처: https://www.programiz.com/dsa/stack</i></p>
-
-<p>일반적으로 가장 위 데이터가 쌓여있는 위치를 Top이라고 부른다.</p>
-
-<h3 id="overflowunderflow">Overflow/Underflow</h3>
-<p><br />
-오버플로우는 스택에 삽입 연산을 수행할 때 발생하는 문제이며, 이는 스택을 위해 할당된 저장 공간이 초과되어 더 이상 데이터를 삽입할 수 없는 상황을 말한다.</p>
-
-<p>반대로, 언더플로우는 삭제 연산을 수행할 때 발생하며, 스택에 데이터가 없는 상태에서 삭제를 시도할 때 일어나는 문제이다.</p>
-
-<h2 id="큐">큐</h2>
-<p><br />
-큐는 데이터의 삽입과 삭제가 서로 다른 쪽에서 이루어지는 선형 자료구조이다. 
-그럼으로, 스택과는 달리 삽입된 순서로 데이터가 삭제되며 이는 <b>선입선출</b> 형식이며, 영어로 <b>First In First Out</b> 줄여서 <b>FIFO</b>라고 한다.</p>
-
-<p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
-큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
-데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /></entry><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
+완전 탐색에 사용되는 가장 기본적인 도구들이다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /></entry><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#ecf" id="markdown-toc-ecf">ECF</a></li>
   <li><a href="#예외상황" id="markdown-toc-예외상황">예외상황</a>    <ul>
       <li><a href="#인터럽트-1" id="markdown-toc-인터럽트-1">인터럽트</a></li>
@@ -298,23 +263,7 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 
 <p>이게 무슨 말이냐면,<br />
 하나의 실물 컴퓨팅 자원을 마치 여러 개인 것처럼 가상으로 쪼개서 사용하거나,<br />
-여러 개의 실물 컴퓨팅 자원들을 묶어서 하나의 자원인 것처럼 사용하겠다는 것이다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer" /><category term="Science" /><summary type="html"><![CDATA[가상화란 컴퓨터 리소스의 추상화를 의미한다.]]></summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2024-01-31-welcome-to-jekyll/" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2024-01-31T22:35:04+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/jekyll/update/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2024-01-31-welcome-to-jekyll/"><![CDATA[<p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
-
-<p>Jekyll requires blog post files to be named according to the following format:</p>
-
-<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
-
-<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
-
-<p>Jekyll also offers powerful support for code snippets:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
-
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">힙 정렬</title><link href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" rel="alternate" type="text/html" title="힙 정렬" /><published>2024-01-15T20:00:00+09:00</published><updated>2024-02-20T20:39:12+09:00</updated><id>http://localhost:4000/cs/algorithm/heapsort</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"><![CDATA[<ul id="markdown-toc">
+여러 개의 실물 컴퓨팅 자원들을 묶어서 하나의 자원인 것처럼 사용하겠다는 것이다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer" /><category term="Science" /><summary type="html"><![CDATA[가상화란 컴퓨터 리소스의 추상화를 의미한다.]]></summary></entry><entry><title type="html">힙 정렬</title><link href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" rel="alternate" type="text/html" title="힙 정렬" /><published>2024-01-15T20:00:00+09:00</published><updated>2024-02-20T22:37:16+09:00</updated><id>http://localhost:4000/cs/algorithm/heapsort</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"><![CDATA[<ul id="markdown-toc">
   <li><a href="#힙" id="markdown-toc-힙">힙</a></li>
   <li><a href="#힙-정렬" id="markdown-toc-힙-정렬">힙 정렬</a>    <ul>
       <li><a href="#시간-복잡도" id="markdown-toc-시간-복잡도">시간 복잡도</a></li>
@@ -372,13 +321,23 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 <p class="figcaption"><img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F3b52846b-e4ae-48a5-bfa0-066290ee20dd%2FUntitled.png?table=block&amp;id=8578cff7-0a0a-4709-9288-72c02c4e6a81&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=930&amp;userId=&amp;cache=v2" alt="deleted" width="550" /><br />
 50 삭제 후의 트리</p>
 
-<style>
+<!-- <style>
     .table1 td:nth-child(7) { background: lightgrey!important;}
-</style>
+</style> -->
 
-<div class="table1">
-|  16  |  30  |  20  |  15  |  10  |   8  |      | 
-</div>
+<table>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td>30</td>
+      <td>20</td>
+      <td>15</td>
+      <td>10</td>
+      <td>8</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
 
 <p>이 때, 비어있게 된 위치에 삭제된 값을 넣으면 추가적인 공간 할당 필요 없이<br />
 가장 큰 값을 뒤 여유 공간에 위치하게 할 수 있다.<br />
@@ -419,10 +378,10 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 
 <p>이제 30을 삭제하고, 30을 삭제한 후의 위의 과정을 진행한 힙 배열을 다시 정렬하면 아래의 힙 배열이 나온다.</p>
 
-<style>
+<!-- <style>
     td:nth-child(6) { background: lightgrey!important;}
     td:nth-child(7) { background: lightgrey!important;}
-</style>
+</style> -->
 
 <table>
   <tbody>
@@ -440,11 +399,11 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 
 <p>해당 과정을 반복해보자.</p>
 
-<style>
+<!-- <style>
     td:nth-child(5) { background: lightgrey!important;}
     td:nth-child(6) { background: lightgrey!important;}
     td:nth-child(7) { background: lightgrey!important;}
-</style>
+</style> -->
 
 <table>
   <tbody>
@@ -460,12 +419,12 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
   </tbody>
 </table>
 
-<style>
+<!-- <style>
     td:nth-child(4) { background: lightgrey!important;}
     td:nth-child(5) { background: lightgrey!important;}
     td:nth-child(6) { background: lightgrey!important;}
     td:nth-child(7) { background: lightgrey!important;}
-</style>
+</style> -->
 
 <table>
   <tbody>
@@ -481,13 +440,13 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
   </tbody>
 </table>
 
-<style>
+<!-- <style>
     td:nth-child(3) { background: lightgrey!important;}
     td:nth-child(4) { background: lightgrey!important;}
     td:nth-child(5) { background: lightgrey!important;}
     td:nth-child(6) { background: lightgrey!important;}
     td:nth-child(7) { background: lightgrey!important;}
-</style>
+</style> -->
 
 <table>
   <tbody>
@@ -503,14 +462,14 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
   </tbody>
 </table>
 
-<style>
+<!-- <style>
     td:nth-child(2) { background: lightgrey!important;}
     td:nth-child(3) { background: lightgrey!important;}
     td:nth-child(4) { background: lightgrey!important;}
     td:nth-child(5) { background: lightgrey!important;}
     td:nth-child(6) { background: lightgrey!important;}
     td:nth-child(7) { background: lightgrey!important;}
-</style>
+</style> -->
 
 <table>
   <tbody>
@@ -536,4 +495,43 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 <p>힙 정렬의 시간 복잡도는 O(nlogn)이다.<br />
 힙을 만드는데 O(n)의 시간이 걸리고, 힙을 정렬하는데 O(nlogn)의 시간이 걸리기 때문이다.<br />
 힙 정렬은 최악의 경우 O(nlogn)의 시간 복잡도를 보장하기 때문에 대규모 데이터를 정렬하는데에 효율적이다.<br />
-다만, 상수 계수가 크기 때문에 데이터의 크기가 작을 경우에는 다른 정렬 알고리즘보다 느릴 수 있다는 단점도 있다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /><category term="알고리즘" /><category term="정렬" /></entry></feed>
+다만, 상수 계수가 크기 때문에 데이터의 크기가 작을 경우에는 다른 정렬 알고리즘보다 느릴 수 있다는 단점도 있다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /><category term="알고리즘" /><category term="정렬" /></entry><entry><title type="html">배열과 연결 리스트</title><link href="http://localhost:4000/cs/datastructure/2024-01-11-array_linkedlist/" rel="alternate" type="text/html" title="배열과 연결 리스트" /><published>2024-01-11T15:00:00+09:00</published><updated>2024-02-20T17:03:37+09:00</updated><id>http://localhost:4000/cs/datastructure/array_linkedlist</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-01-11-array_linkedlist/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#배열" id="markdown-toc-배열">배열</a></li>
+</ul>
+
+<h2 id="배열">배열</h2>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /><category term="자료구조" /></entry><entry><title type="html">스택과 큐</title><link href="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/" rel="alternate" type="text/html" title="스택과 큐" /><published>2024-01-11T15:00:00+09:00</published><updated>2024-02-20T22:40:49+09:00</updated><id>http://localhost:4000/cs/datastructure/stack_queue</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#스택" id="markdown-toc-스택">스택</a>    <ul>
+      <li><a href="#overflowunderflow" id="markdown-toc-overflowunderflow">Overflow/Underflow</a></li>
+    </ul>
+  </li>
+  <li><a href="#큐" id="markdown-toc-큐">큐</a></li>
+</ul>
+
+<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
+
+<h2 id="스택">스택</h2>
+<p><br />
+스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
+이러한 삽입과 삭제 구조로 인해 스택에서의 데이  터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
+이를 <b>선입후출</b> 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
+스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
+
+<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />      <br />
+스택의 푸시/팝 연산 <i>출처: https://www.programiz.com/dsa/stack</i></p>
+
+<p>일반적으로 가장 위 데이터가 쌓여있는 위치를 Top이라고 부른다.</p>
+
+<h3 id="overflowunderflow">Overflow/Underflow</h3>
+<p><br />
+오버플로우는 스택에 삽입 연산을 수행할 때 발생하는 문제이며, 이는 스택을 위해 할당된 저장 공간이 초과되어 더 이상 데이터를 삽입할 수 없는 상황을 말한다.</p>
+
+<p>반대로, 언더플로우는 삭제 연산을 수행할 때 발생하며, 스택에 데이터가 없는 상태에서 삭제를 시도할 때 일어나는 문제이다.</p>
+
+<h2 id="큐">큐</h2>
+<p><br />
+큐는 데이터의 삽입과 삭제가 서로 다른 쪽에서 이루어지는 선형 자료구조이다. 
+그럼으로, 스택과는 달리 삽입된 순서로 데이터가 삭제되며 이는 <b>선입선출</b> 형식이며, 영어로 <b>First In First Out</b> 줄여서 <b>FIFO</b>라고 한다.</p>
+
+<p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
+큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
+데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /><category term="자료구조" /></entry></feed>
