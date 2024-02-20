@@ -62,8 +62,8 @@ menu:
   - title: Coding
     url: /coding/
     submenu: 
-      - title: BaekJoon
-        url: https://github.com/jaenam615/BaekjoonHub/tree/main/%EB%B0%B1%EC%A4%80
+      - title: BaekJoon 
+        url: /baekjoon/
   - title: Documentation
     url: /docs/
   - title: About
