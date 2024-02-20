@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-19T14:47:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">완전탐색</title><link href="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/" rel="alternate" type="text/html" title="완전탐색" /><published>2024-02-17T20:00:00+09:00</published><updated>2024-02-17T22:44:06+09:00</updated><id>http://localhost:4000/cs/algorithm/exhaustive-search</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/"><![CDATA[<ul id="markdown-toc">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T17:26:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">완전탐색</title><link href="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/" rel="alternate" type="text/html" title="완전탐색" /><published>2024-02-17T20:00:00+09:00</published><updated>2024-02-20T17:06:51+09:00</updated><id>http://localhost:4000/cs/algorithm/exhaustive-search</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/"><![CDATA[<ul id="markdown-toc">
   <li><a href="#완전탐색" id="markdown-toc-완전탐색">완전탐색</a></li>
 </ul>
 
@@ -60,11 +60,7 @@
 
 <p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
 큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
-데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /></entry><entry><title type="html">배열과 연결 리스트</title><link href="http://localhost:4000/cs/datastructure/2024-02-16-array_linkedlist/" rel="alternate" type="text/html" title="배열과 연결 리스트" /><published>2024-02-16T15:00:00+09:00</published><updated>2024-02-17T22:44:09+09:00</updated><id>http://localhost:4000/cs/datastructure/array_linkedlist</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-02-16-array_linkedlist/"><![CDATA[<ul id="markdown-toc">
-  <li><a href="#배열" id="markdown-toc-배열">배열</a></li>
-</ul>
-
-<h2 id="배열">배열</h2>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /></entry><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
+데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /></entry><entry><title type="html">Ethernet</title><link href="http://localhost:4000/2024-02-15-ethernet/" rel="alternate" type="text/html" title="Ethernet" /><published>2024-02-15T00:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/ethernet</id><content type="html" xml:base="http://localhost:4000/2024-02-15-ethernet/"><![CDATA[]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Exceptional Control Flow</title><link href="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/" rel="alternate" type="text/html" title="Exceptional Control Flow" /><published>2024-02-08T19:30:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science,/os/exceptional_control_flow</id><content type="html" xml:base="http://localhost:4000/computer_science,/os/2024-02-08-exceptional_control_flow/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#ecf" id="markdown-toc-ecf">ECF</a></li>
   <li><a href="#예외상황" id="markdown-toc-예외상황">예외상황</a>    <ul>
       <li><a href="#인터럽트-1" id="markdown-toc-인터럽트-1">인터럽트</a></li>
@@ -318,4 +314,46 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry></feed>
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">힙 정렬</title><link href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" rel="alternate" type="text/html" title="힙 정렬" /><published>2024-01-15T20:00:00+09:00</published><updated>2024-02-20T17:26:29+09:00</updated><id>http://localhost:4000/cs/algorithm/heapsort</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#힙" id="markdown-toc-힙">힙</a></li>
+  <li><a href="#힙-정렬" id="markdown-toc-힙-정렬">힙 정렬</a></li>
+</ul>
+
+<h2 id="힙">힙</h2>
+
+<p>힙이란 완전 이진 트리의 일종이며, <br />
+여러 개의 값들 중에서 최대값이나 최솟값을 빠르게 찾아내도록 만들어진 자료구조이다.<br />
+최대 힙 기준으로 큰 키값이 상위 레벨에 있고 작은 키값이 하위 레벨에 있으며<br />
+이러한 특징으로 인해 부모 노드의 키값이 자식 노드의 키값보다 항상 큰 이진 트리이다.</p>
+
+<p>자세한 내용은 <a href="http://jaenam615.github.io/cs/datastructure/2024-01-12-heap/">힙</a>에 정리되어있다.</p>
+
+<h2 id="힙-정렬">힙 정렬</h2>
+
+<p>힙 자료구조를 사용하여 정렬하는 알고리즘이다.</p>
+
+<p>이는 배열로 표현된 트리를 다시 배열로 정렬하는 방식으로 구현하는데,<br />
+힙 배열의 루트에서 원소를 삭제하여 줄어든 힙 배열 크기 뒤에 남는 공간에 삭제한 원소를 도로 넣음으로 정렬을 한다.<br />
+<br />
+<img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F2133cb71-0c2c-48db-a62c-da90ddfc6ff9%2FUntitled.png?table=block&amp;id=3de1282c-d289-4b0b-8620-eb0006f54d8c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=2000&amp;userId=&amp;cache=v2" alt="initialheap" width="500" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>30</td>
+      <td>20</td>
+      <td>15</td>
+      <td>10</td>
+      <td>8</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위는 값들이 들어간 힙과 해당 힙이 배열로 표현된 것이다.</p>
+
+<p>힙 정렬을 하려면 값들을 삭제해야 하는데, 힙에서의 삭제는 루트 노드에서만 이루어진다.<br />
+주의해야 할 점은, <b>삭제되는 값 자체는 루트 노드의 값이지만, 삭제되는 노드는 단말 노드라는 점이다.</b><br />
+삭제되는 노드는 단말 노드, 그 중 가장 오른쪽의 노드여야 하는데<br />
+이것은 항상 완전 이진 트리를 유지해야 하기 때문이다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /><category term="알고리즘" /><category term="정렬" /></entry></feed>

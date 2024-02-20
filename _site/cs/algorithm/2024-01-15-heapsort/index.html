@@ -25,28 +25,27 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 
 
 
-  <meta name="robots" content="noindex">
-
 
 
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Documentation | Jae’s Blog</title>
+<title>힙 정렬 | Jae’s Blog</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="Documentation" />
+<meta property="og:title" content="힙 정렬" />
 <meta name="author" content="Jaehee Nam" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack." />
-<meta property="og:description" content="Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack." />
-<link rel="canonical" href="http://localhost:4000/docs/" />
-<meta property="og:url" content="http://localhost:4000/docs/" />
+<meta name="description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<meta property="og:description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
+<link rel="canonical" href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" />
+<meta property="og:url" content="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" />
 <meta property="og:site_name" content="Jae’s Blog" />
-<meta property="og:type" content="website" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2024-01-15T20:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Documentation" />
+<meta property="twitter:title" content="힙 정렬" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-17T00:06:58+09:00","description":"Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.","headline":"Documentation","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/docs/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-20T17:26:29+09:00","datePublished":"2024-01-15T20:00:00+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"힙 정렬","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -74,7 +73,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/docs/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jae&apos;s Blog" />
 
@@ -208,7 +207,7 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 
   <main
   id="_main"
-  class="content layout-page"
+  class="content layout-post"
   role="main"
 >
   <nav id="breadcrumbs" class="screen-only"><ul>
@@ -219,63 +218,257 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
       <li>
         
           <span>/</span>
-          <span>docs</span>
+          
+          
+          <a href="/cs/">cs</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          
+          
+          <a href="/cs/algorithm/">algorithm</a>
+        
+      </li>
+    
+      <li>
+        
+          <span>/</span>
+          <span>2024-01-15-heapsort</span>
         
       </li>
     
   
 </ul></nav>
-  <article class="page mb6" role="article">
+  
+
+
+
+
+
+
+
+
+
+
+<article id="post-cs-algorithm-heapsort" class="page post mb6" role="article">
   <header>
-    <h1 class="page-title">Documentation</h1>
+    <h1 class="post-title flip-project-title">
+      
+        힙 정렬
+      
+    </h1>
+
+    <div class="post-date">
+      
+      <span class="ellipsis mr1">
+        <time datetime="2024-01-15T20:00:00+09:00">15 Jan 2024</time> in <a href="/cs/" class="flip-title">Computer Science</a> / <a href="/algorithm/" class="flip-title">Algorithm</a> on <span>알고리즘</span>, <span>정렬</span>
+      </span>
+      
+        
+          
+          
+          
+            
+            
+            <span class="ellipsis" data-tippy-content="Last modified at: 20 Feb 2024">
+              <span class="sr-only">Last modified at:</span>
+              <span class="icon-history"></span>
+              <time datetime="2024-02-20T17:26:29+09:00">2024-02-20</time>
+            </span>
+          
+        
+      
+    </div>
+
+    
+    
+
     
 
 
 
-  
-    <div class="hr pb0"></div>
-  
+  <div class="hr pb0"></div>
 
 
   </header>
 
-  <p>Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.
-Should you think something is missing, <a href="mailto:mail@qwtel.com">please let me know</a>.
-Should you discover a mistake in the docs (or a bug in general) feel free to <a href="https://github.com/hydecorp/hydejack/issues">open an issue</a> on GitHub.</p>
-
-<p class="note">While this manual tries to be beginner-friendly, as a user of Jekyll it is assumed that you are comfortable running shell commands and editing text files.</p>
-
-<h2 id="getting-started">Getting started</h2>
-<ul class="related-posts faded">
-  <li><a href="/docs/install/" class="heading flip-title">Install</a> — How to install and run Hydejack.</li>
-  <li><a href="/docs/upgrade/" class="heading flip-title">Upgrade</a> — You can skip this if you haven’t used Hydejack before.</li>
-  <li><a href="/docs/config/" class="heading flip-title">Config</a> — Once Jekyll is running you can start editing your config file.</li>
+  
+    <ul id="markdown-toc">
+  <li><a href="#힙" id="markdown-toc-힙">힙</a></li>
+  <li><a href="#힙-정렬" id="markdown-toc-힙-정렬">힙 정렬</a></li>
 </ul>
 
-<h2 id="using-hydejack">Using Hydejack</h2>
-<ul class="related-posts faded">
-  <li><a href="/docs/basics/" class="heading flip-title">Basics</a> — How to add different types of content.</li>
-  <li><a href="/docs/writing/" class="heading flip-title">Writing</a> — Producing markdown content for Hydejack.</li>
-  <li><a href="/docs/scripts/" class="heading flip-title">Scripts</a> — How to include 3rd party scripts on your site.</li>
-  <li><a href="/docs/build/" class="heading flip-title">Build</a> — How to build the static files for deployment.</li>
-  <li><a href="/docs/advanced/" class="heading flip-title">Advanced</a> — Guides for more advanced tasks.</li>
-</ul>
+<h2 id="힙">힙</h2>
 
-<h2 id="other">Other</h2>
-<ul class="related-posts faded">
-  <li><a href="/LICENSE/" class="heading flip-title">LICENSE</a> — The license of this project.</li>
-  <li><a href="/NOTICE/" class="heading flip-title">NOTICE</a> — Parts of this program are provided under separate licenses.</li>
-  <li><a href="/CHANGELOG/" class="heading flip-title">CHANGELOG</a> — Version history of Hydejack.</li>
-</ul>
+<p>힙이란 완전 이진 트리의 일종이며, <br />
+여러 개의 값들 중에서 최대값이나 최솟값을 빠르게 찾아내도록 만들어진 자료구조이다.<br />
+최대 힙 기준으로 큰 키값이 상위 레벨에 있고 작은 키값이 하위 레벨에 있으며<br />
+이러한 특징으로 인해 부모 노드의 키값이 자식 노드의 키값보다 항상 큰 이진 트리이다.</p>
 
+<p>자세한 내용은 <a href="http://jaenam615.github.io/cs/datastructure/2024-01-12-heap/">힙</a>에 정리되어있다.</p>
 
+<h2 id="힙-정렬">힙 정렬</h2>
+
+<p>힙 자료구조를 사용하여 정렬하는 알고리즘이다.</p>
+
+<p>이는 배열로 표현된 트리를 다시 배열로 정렬하는 방식으로 구현하는데,<br />
+힙 배열의 루트에서 원소를 삭제하여 줄어든 힙 배열 크기 뒤에 남는 공간에 삭제한 원소를 도로 넣음으로 정렬을 한다.<br />
+<br />
+<img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F2133cb71-0c2c-48db-a62c-da90ddfc6ff9%2FUntitled.png?table=block&amp;id=3de1282c-d289-4b0b-8620-eb0006f54d8c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=2000&amp;userId=&amp;cache=v2" alt="initialheap" width="500" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>50</td>
+      <td>30</td>
+      <td>20</td>
+      <td>15</td>
+      <td>10</td>
+      <td>8</td>
+      <td>16</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>위는 값들이 들어간 힙과 해당 힙이 배열로 표현된 것이다.</p>
+
+<p>힙 정렬을 하려면 값들을 삭제해야 하는데, 힙에서의 삭제는 루트 노드에서만 이루어진다.<br />
+주의해야 할 점은, <b>삭제되는 값 자체는 루트 노드의 값이지만, 삭제되는 노드는 단말 노드라는 점이다.</b><br />
+삭제되는 노드는 단말 노드, 그 중 가장 오른쪽의 노드여야 하는데<br />
+이것은 항상 완전 이진 트리를 유지해야 하기 때문이다.</p>
+
+  
 </article>
+
 
 
   <hr class="dingbat related mb6" />
 
 
 
+
+
+
+  
+     
+
+
+  <aside class="about related mt4 mb4" role="complementary">
+    
+    
+
+<div class="author mt4">
+  
+
+  
+    
+
+
+<img
+  
+    src="/assets/img/snail.png"
+    
+    
+  
+  alt="Jaehee Nam"
+  class="avatar"
+  
+  width="120"
+  height="120"
+  loading="lazy"
+/>
+
+  
+
+  
+  
+  <h2  class="page-title hr-bottom">
+    About
+  </h2>
+
+  <p>수양하는 코린이입니다.</p>
+
+
+  <div class="sidebar-social">
+    <span class="sr-only">Social:</span>
+<ul>
+  
+    
+      
+
+
+
+  
+
+  
+  
+  
+  
+
+  
+
+  
+
+  <li>
+    <a href="https://github.com/jaenam615" title="GitHub" class="no-mark-external">
+      <span class="icon-github"></span>
+      <span class="sr-only">GitHub</span>
+    </a>
+  </li>
+
+
+    
+  
+</ul>
+
+  </div>
+</div>
+
+  </aside>
+
+
+  
+
+  
+  
+
+  
+    
+
+
+  <aside class="related mb4" role="complementary">  <h2 class="hr-bottom">Related Posts</h2>  <ul class="related-posts">                  <li class="h4">  <a href="/cs/algorithm/2024-02-17-exhaustive-search/" class="flip-title"><span>완전탐색</span></a>  <time class="faded fine" datetime="2024-02-17T20:00:00+09:00">17 Feb 2024</time></li>                        <li class="h4">  <a href="/cs/datastructure/2024-02-17-stack_queue/" class="flip-title"><span>스택과 큐</span></a>  <time class="faded fine" datetime="2024-02-17T15:00:00+09:00">17 Feb 2024</time></li>                        <li class="h4">  <a href="/2024-02-15-ethernet/" class="flip-title"><span>Ethernet</span></a>  <time class="faded fine" datetime="2024-02-15T00:00:00+09:00">15 Feb 2024</time></li>            </ul></aside>
+
+  
+
+  
+  
+
+  
+    
+<aside class="comments related" role="complementary">
+  <h2 class="hr-bottom">Comments</h2>
+  <script src="https://giscus.app/client.js"
+        data-repo="jaenam615/jaenam615.github.io"
+        data-repo-id="R_kgDOLMBWpw"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOLMBWp84CdInI"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+</script>
+</aside>
+
+
+  
 
 
   
