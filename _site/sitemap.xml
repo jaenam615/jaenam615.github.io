@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://localhost:4000/coding/</loc>
+<lastmod>2024-02-20T23:23:54+09:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/jekyll/update/2020-01-31-welcome-to-jekyll/</loc>
 <lastmod>2024-02-20T22:57:48+09:00</lastmod>
 </url>
@@ -25,8 +29,8 @@
 <lastmod>2024-02-17T00:06:58+09:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/computer_science/2024-02-07-allocator/</loc>
-<lastmod>2024-02-17T00:06:58+09:00</lastmod>
+<loc>http://localhost:4000/coding/baekjoon/2024-02-07-allocator/</loc>
+<lastmod>2024-02-20T23:25:29+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/computer_science/2024-02-07-free_list/</loc>
@@ -43,6 +47,10 @@
 <url>
 <loc>http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/</loc>
 <lastmod>2024-02-20T17:06:51+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/coding/baekjoon/2024-02-20-boj2156/</loc>
+<lastmod>2024-02-20T23:28:47+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>

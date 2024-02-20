@@ -30,22 +30,22 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
   
     
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>힙 정렬 | Jae’s Blog</title>
+<title>동적 메모리 할당기 | Jae’s Blog</title>
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="힙 정렬" />
+<meta property="og:title" content="동적 메모리 할당기" />
 <meta name="author" content="Jaehee Nam" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
 <meta property="og:description" content="Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress." />
-<link rel="canonical" href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" />
-<meta property="og:url" content="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" />
+<link rel="canonical" href="http://localhost:4000/coding/baekjoon/2024-02-07-allocator/" />
+<meta property="og:url" content="http://localhost:4000/coding/baekjoon/2024-02-07-allocator/" />
 <meta property="og:site_name" content="Jae’s Blog" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-01-15T20:00:00+09:00" />
+<meta property="article:published_time" content="2024-02-07T20:00:00+09:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="힙 정렬" />
+<meta property="twitter:title" content="동적 메모리 할당기" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-20T22:37:16+09:00","datePublished":"2024-01-15T20:00:00+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"힙 정렬","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jaehee Nam"},"dateModified":"2024-02-20T23:25:29+09:00","datePublished":"2024-02-07T20:00:00+09:00","description":"Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.","headline":"동적 메모리 할당기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/coding/baekjoon/2024-02-07-allocator/"},"publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://localhost:4000/assets/img/icon-test.gif"},"name":"Jaehee Nam"},"url":"http://localhost:4000/coding/baekjoon/2024-02-07-allocator/"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -73,7 +73,7 @@ Powered by Hydejack v9.1.6 <https://hydejack.com/>
 <meta name="generator" content="Hydejack v9.1.6" />
 
 
-<link rel="alternate" href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" hreflang="en">
+<link rel="alternate" href="http://localhost:4000/coding/baekjoon/2024-02-07-allocator/" hreflang="en">
 
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Jae&apos;s Blog" />
 
@@ -220,7 +220,7 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
           <span>/</span>
           
           
-          <a href="/cs/">cs</a>
+          <a href="/coding/">coding</a>
         
       </li>
     
@@ -229,14 +229,14 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
           <span>/</span>
           
           
-          <a href="/cs/algorithm/">algorithm</a>
+          <a href="/coding/baekjoon/">baekjoon</a>
         
       </li>
     
       <li>
         
           <span>/</span>
-          <span>2024-01-15-heapsort</span>
+          <span>2024-02-07-allocator</span>
         
       </li>
     
@@ -253,18 +253,18 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
 
 
 
-<article id="post-cs-algorithm-heapsort" class="page post mb6" role="article">
+<article id="post-coding-baekjoon-allocator" class="page post mb6" role="article">
   <header>
     <h1 class="post-title flip-project-title">
       
-        힙 정렬
+        동적 메모리 할당기
       
     </h1>
 
     <div class="post-date">
       
       <span class="ellipsis mr1">
-        <time datetime="2024-01-15T20:00:00+09:00">15 Jan 2024</time> in <a href="/cs/" class="flip-title">Computer Science</a> / <a href="/algorithm/" class="flip-title">Algorithm</a> on <span>알고리즘</span>, <span>정렬</span>
+        <time datetime="2024-02-07T20:00:00+09:00">07 Feb 2024</time> in <a href="/coding/" class="flip-title">Coding</a> / <a href="/baekjoon/" class="flip-title">BaekJoon</a> 
       </span>
       
         
@@ -276,7 +276,7 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
             <span class="ellipsis" data-tippy-content="Last modified at: 20 Feb 2024">
               <span class="sr-only">Last modified at:</span>
               <span class="icon-history"></span>
-              <time datetime="2024-02-20T22:37:16+09:00">2024-02-20</time>
+              <time datetime="2024-02-20T23:25:29+09:00">2024-02-20</time>
             </span>
           
         
@@ -296,239 +296,43 @@ html{--accent-color: rgb(68, 129, 219);--accent-color-faded: rgba(68, 129, 219, 
   </header>
 
   
-    <ul id="markdown-toc">
-  <li><a href="#힙" id="markdown-toc-힙">힙</a></li>
-  <li><a href="#힙-정렬" id="markdown-toc-힙-정렬">힙 정렬</a>    <ul>
-      <li><a href="#시간-복잡도" id="markdown-toc-시간-복잡도">시간 복잡도</a></li>
+    <ul class="large-only" id="markdown-toc">
+  <li><a href="#동적-메모리-할당기" id="markdown-toc-동적-메모리-할당기">동적 메모리 할당기</a>    <ul>
+      <li><a href="#명시적-할당기-1" id="markdown-toc-명시적-할당기-1">명시적 할당기</a></li>
+      <li><a href="#묵시적-할당기-1" id="markdown-toc-묵시적-할당기-1">묵시적 할당기</a></li>
     </ul>
   </li>
 </ul>
 
-<h2 id="힙">힙</h2>
+<h2 id="동적-메모리-할당기">동적 메모리 할당기</h2>
 
-<p>힙이란 완전 이진 트리의 일종이며, <br />
-여러 개의 값들 중에서 최대값이나 최솟값을 빠르게 찾아내도록 만들어진 자료구조이다.<br />
-최대 힙 기준으로 큰 키값이 상위 레벨에 있고 작은 키값이 하위 레벨에 있으며<br />
-이러한 특징으로 인해 부모 노드의 키값이 자식 노드의 키값보다 항상 큰 이진 트리이다.</p>
+<p>저수준의 mmap과 munmap 함수들을 사용하여 가상메모리의 영역을 생성하고 삭제할 수 있지만, <br />
+대개 추가적인 가상메모리를 런타임에 획득할 필요가 있을 때 <i>동적 메모리 할당기</i>라는 것을 사용하는 것이 편리하고 호환성이 좋다고 여겨진다.</p>
 
-<p>자세한 내용은 <a href="http://jaenam615.github.io/cs/datastructure/2024-01-12-heap/">힙</a>에 정리되어있다.</p>
+<p>동적 메모리 할당기는 <i>heap</i>, 즉 프로세스의 가상 메모리 영역을 관리한다. <br />
+할당기는 힙을 다양한 크기의 블록들의 집합으로 관리하며, 이 때 각 블록은 할당되었거나 가용한 가상메모리의 연속적인 묶음이다.</p>
 
-<h2 id="힙-정렬">힙 정렬</h2>
+<p>할당기에는 두 개의 기본 유형이 있다:</p>
+<ul>
+  <li>명시적 할당기</li>
+  <li>묵시적 할당기</li>
+</ul>
 
-<p>힙 자료구조를 사용하여 정렬하는 알고리즘이다.</p>
+<p>두 유형 모두 할당시에는 명시적으로 블록을 할당하도록 요구하지만, 할당된 블록을 반환하는 방식에 차이가 있다.</p>
 
-<p>힙 정렬은 배열로 표현된 트리의 값들을 이당(삭제 및 다시 삽입)시켜 다시 배열로 정렬하는 방식으로 구현하는데,<br />
-힙 배열의 루트에서 원소를 삭제하여 줄어든 힙 배열 크기 뒤에 남는 공간에 삭제한 원소를 도로 넣음으로 정렬을 한다.<br />
-<br />
-<img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F2133cb71-0c2c-48db-a62c-da90ddfc6ff9%2FUntitled.png?table=block&amp;id=3de1282c-d289-4b0b-8620-eb0006f54d8c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=2000&amp;userId=&amp;cache=v2" alt="initialheap" width="550" /></p>
+<h3 id="명시적-할당기-1">명시적 할당기</h3>
 
-<table>
-  <tbody>
-    <tr>
-      <td>50</td>
-      <td>30</td>
-      <td>20</td>
-      <td>15</td>
-      <td>10</td>
-      <td>8</td>
-      <td>16</td>
-    </tr>
-  </tbody>
-</table>
+<p>명시적 할당기는 할당된 블록의 반환하기 위해 애플리케이션이 명시적으로 요구해야 한다. <br />
+예시로는 C 표준 라이브러리의 <code class="language-plaintext highlighter-rouge">malloc()</code> 함수가 있다.<br />
+C 프로그램은 malloc 함수를 호출해서 블록을 할당하며, 할당된 블록을 반환하기 위해서는 <code class="language-plaintext highlighter-rouge">free()</code>함수를 호출해야 한다. <br />
+C++ 에서는 <code class="language-plaintext highlighter-rouge">new()</code>와 <code class="language-plaintext highlighter-rouge">delete()</code>가 있다.</p>
 
-<p>위는 값들이 들어간 힙과 그에 대응되는 배열을 시각적으로 표현한 것이다.</p>
+<h3 id="묵시적-할당기-1">묵시적 할당기</h3>
 
-<p>힙 정렬을 하려면 값들을 삭제해야 하는데, 힙에서의 삭제는 루트 노드에서만 이루어진다.<br />
-주의해야 할 점은, <b>삭제되는 값 자체는 루트 노드의 값이지만, 삭제되는 노드는 단말 노드라는 점이다.</b><br />
-삭제되는 노드는 단말 노드, 그 중 가장 오른쪽의 노드여야 하는데<br />
-이는 힙이 항상 완전 이진 트리를 유지해야 하기 때문이다.</p>
-
-<p>힙 정렬을 할 때 삭제되는 값은 루트 노드에 있는 값(가장 큰 값)이기 때문에<br />
-루트 노드에 있는 값인 50을 먼저 삭제하고자 한다. 
-다만 앞서 말했듯이 힙은 완전 이진 트리의 형태를 유지해야 함으로<br />
-50의 위치를 최하위 레벨의 가장 우측 노드에 있는 값과 바꿔주고 50을 삭제한다.</p>
-
-<!-- ![switched](https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F41546254-da8f-4882-a6e4-23bfc26797e5%2FUntitled.png?table=block&id=560182cf-659f-4e30-8bc3-ed56ab2d7179&spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&width=2000&userId=&cache=v2){: width="550" height="320";}
-
-|  16  |  30  |  20  |  15  |  10  |   8  |  50  | -->
-<p class="figcaption"><img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F3b52846b-e4ae-48a5-bfa0-066290ee20dd%2FUntitled.png?table=block&amp;id=8578cff7-0a0a-4709-9288-72c02c4e6a81&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=930&amp;userId=&amp;cache=v2" alt="deleted" width="550" /><br />
-50 삭제 후의 트리</p>
-
-<!-- <style>
-    .table1 td:nth-child(7) { background: lightgrey!important;}
-</style> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td>16</td>
-      <td>30</td>
-      <td>20</td>
-      <td>15</td>
-      <td>10</td>
-      <td>8</td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
-
-<p>이 때, 비어있게 된 위치에 삭제된 값을 넣으면 추가적인 공간 할당 필요 없이<br />
-가장 큰 값을 뒤 여유 공간에 위치하게 할 수 있다.<br />
-회색으로 표시된 영역은 힙 배열의 크기가 줄어든 부분이며, 더 이상 힙 배열로서의 역할을 하지 않는다.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>16</td>
-      <td>30</td>
-      <td>20</td>
-      <td>15</td>
-      <td>10</td>
-      <td>8</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>이제 50을 삭제하였으니 조정을 하여 다시 힙을 만들어야 한다.
-16을 그 자식 노드들과 비교하여 큰 값과 바꿔주고 필요시 이를 반복하면 된다.</p>
-
-<p><img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F45f0a677-9c9f-4d01-a9a4-a1dd6c48a9e4%2FUntitled.png?table=block&amp;id=8695fe0a-b01d-4088-8f95-3c4801e2c27c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=1160&amp;userId=&amp;cache=v2" alt="rebalancing" width="550" /></p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>30</td>
-      <td>16</td>
-      <td>20</td>
-      <td>15</td>
-      <td>10</td>
-      <td>8</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>이제 30을 삭제하고, 30을 삭제한 후의 위의 과정을 진행한 힙 배열을 다시 정렬하면 아래의 힙 배열이 나온다.</p>
-
-<!-- <style>
-    td:nth-child(6) { background: lightgrey!important;}
-    td:nth-child(7) { background: lightgrey!important;}
-</style> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td>20</td>
-      <td>16</td>
-      <td>8</td>
-      <td>15</td>
-      <td>10</td>
-      <td>30</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>해당 과정을 반복해보자.</p>
-
-<!-- <style>
-    td:nth-child(5) { background: lightgrey!important;}
-    td:nth-child(6) { background: lightgrey!important;}
-    td:nth-child(7) { background: lightgrey!important;}
-</style> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td>16</td>
-      <td>15</td>
-      <td>8</td>
-      <td>10</td>
-      <td>20</td>
-      <td>30</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- <style>
-    td:nth-child(4) { background: lightgrey!important;}
-    td:nth-child(5) { background: lightgrey!important;}
-    td:nth-child(6) { background: lightgrey!important;}
-    td:nth-child(7) { background: lightgrey!important;}
-</style> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td>15</td>
-      <td>10</td>
-      <td>8</td>
-      <td>16</td>
-      <td>20</td>
-      <td>30</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- <style>
-    td:nth-child(3) { background: lightgrey!important;}
-    td:nth-child(4) { background: lightgrey!important;}
-    td:nth-child(5) { background: lightgrey!important;}
-    td:nth-child(6) { background: lightgrey!important;}
-    td:nth-child(7) { background: lightgrey!important;}
-</style> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td>10</td>
-      <td>8</td>
-      <td>15</td>
-      <td>16</td>
-      <td>20</td>
-      <td>30</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<!-- <style>
-    td:nth-child(2) { background: lightgrey!important;}
-    td:nth-child(3) { background: lightgrey!important;}
-    td:nth-child(4) { background: lightgrey!important;}
-    td:nth-child(5) { background: lightgrey!important;}
-    td:nth-child(6) { background: lightgrey!important;}
-    td:nth-child(7) { background: lightgrey!important;}
-</style> -->
-
-<table>
-  <tbody>
-    <tr>
-      <td>8</td>
-      <td>10</td>
-      <td>15</td>
-      <td>16</td>
-      <td>20</td>
-      <td>30</td>
-      <td>50</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>힙 정렬이 완료되어 가장 작은 값부터 큰 값까지 정렬된 것을 확인할 수 있다.
-보이듯 힙 정렬은 힙 배열의 크기를 줄이면서 정렬을 하는 방식이다.</p>
-
-<p>최소 힙이라 가정할 시 가장 작은 값을 삭제하는 방식으로 위 과정을 진행하면 정렬된 배열이 내림차순으로 정렬된다.</p>
-
-<h3 id="시간-복잡도">시간 복잡도</h3>
-
-<p>힙 정렬의 시간 복잡도는 O(nlogn)이다.<br />
-힙을 만드는데 O(n)의 시간이 걸리고, 힙을 정렬하는데 O(nlogn)의 시간이 걸리기 때문이다.<br />
-힙 정렬은 최악의 경우 O(nlogn)의 시간 복잡도를 보장하기 때문에 대규모 데이터를 정렬하는데에 효율적이다.<br />
-다만, 상수 계수가 크기 때문에 데이터의 크기가 작을 경우에는 다른 정렬 알고리즘보다 느릴 수 있다는 단점도 있다.</p>
+<p>묵시적 할당기는 할당된 블록이 더 이상 프로그램에 의해 사용되지 않는지 할당기가 검출할 수 있을 것을 요구하며, <br />
+이러한 검출을 통해 블록의 반환이 별도의 함수 호출 없이 이루어진다.<br />
+묵시적 할당기는 <i>garbage collector</i>라고도 알려져 있으며, 자동으로 사용하지 않는 할당된 블록을 반환하는 작업을 가비지 컬렉션이라고 부른다. <br />
+List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>
 
   
 </article>

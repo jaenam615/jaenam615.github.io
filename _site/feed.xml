@@ -1,5 +1,25 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T22:57:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
-</subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">완전탐색</title><link href="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/" rel="alternate" type="text/html" title="완전탐색" /><published>2024-02-17T20:00:00+09:00</published><updated>2024-02-20T17:06:51+09:00</updated><id>http://localhost:4000/cs/algorithm/exhaustive-search</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/"><![CDATA[<ul id="markdown-toc">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T23:28:53+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">2156 - 포도주 시식</title><link href="http://localhost:4000/coding/baekjoon/2024-02-20-boj2156/" rel="alternate" type="text/html" title="2156 - 포도주 시식" /><published>2024-02-20T13:00:00+09:00</published><updated>2024-02-20T23:28:47+09:00</updated><id>http://localhost:4000/coding/baekjoon/boj2156</id><content type="html" xml:base="http://localhost:4000/coding/baekjoon/2024-02-20-boj2156/"><![CDATA[<ul id="markdown-toc">
+  <li><a href="#문제-설명" id="markdown-toc-문제-설명">문제 설명</a></li>
+</ul>
+
+<h2 id="문제-설명">문제 설명</h2>
+
+<p>효주는 포도주 시식회에 갔다. 그 곳에 갔더니, 테이블 위에 다양한 포도주가 들어있는 포도주 잔이 일렬로 놓여 있었다. 효주는 포도주 시식을 하려고 하는데, 여기에는 다음과 같은 두 가지 규칙이 있다.</p>
+
+<p>포도주 잔을 선택하면 그 잔에 들어있는 포도주는 모두 마셔야 하고, 마신 후에는 원래 위치에 다시 놓아야 한다.
+연속으로 놓여 있는 3잔을 모두 마실 수는 없다.
+효주는 될 수 있는 대로 많은 양의 포도주를 맛보기 위해서 어떤 포도주 잔을 선택해야 할지 고민하고 있다. 1부터 n까지의 번호가 붙어 있는 n개의 포도주 잔이 순서대로 테이블 위에 놓여 있고, 각 포도주 잔에 들어있는 포도주의 양이 주어졌을 때, 효주를 도와 가장 많은 양의 포도주를 마실 수 있도록 하는 프로그램을 작성하시오.</p>
+
+<p>예를 들어 6개의 포도주 잔이 있고, 각각의 잔에 순서대로 6, 10, 13, 9, 8, 1 만큼의 포도주가 들어 있을 때, 첫 번째, 두 번째, 네 번째, 다섯 번째 포도주 잔을 선택하면 총 포도주 양이 33으로 최대로 마실 수 있다.</p>
+
+<p>입력
+첫째 줄에 포도주 잔의 개수 n이 주어진다. (1 ≤ n ≤ 10,000) 둘째 줄부터 n+1번째 줄까지 포도주 잔에 들어있는 포도주의 양이 순서대로 주어진다. 포도주의 양은 1,000 이하의 음이 아닌 정수이다.</p>
+
+<p class="lead">출력
+첫째 줄에 최대로 마실 수 있는 포도주의 양을 출력한다.</p>
+
+<p>hello</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="coding" /><category term="baekjoon" /><summary type="html"><![CDATA[백준 2156 난이도: 실버 1 알고리즘: 동적계획법]]></summary></entry><entry><title type="html">완전탐색</title><link href="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/" rel="alternate" type="text/html" title="완전탐색" /><published>2024-02-17T20:00:00+09:00</published><updated>2024-02-20T17:06:51+09:00</updated><id>http://localhost:4000/cs/algorithm/exhaustive-search</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/"><![CDATA[<ul id="markdown-toc">
   <li><a href="#완전탐색" id="markdown-toc-완전탐색">완전탐색</a></li>
 </ul>
 
@@ -146,7 +166,7 @@ ECF를 이해하면 응용 프로그램들이 어떻게 운영체제와 상호�
 명시적 가용 리스트는 직접적인 포인터 또는 참조를 사용하여 반환된 메모리 블록을 연결하여 관리하며,
 추가적인 포인터 또는 참조를 저장해야 하기 때문에 일반적으로 더 많은 메모리를 필요로 한다.  <br />
 이에 반해, 묵시적 가용 리스트는 힙 내에서의 메모리 블록의 위치와 크기에 의존하여 메모리의 가용 가능성을 판단하며, <br />
-메모리 할당 시 적절한 메모리 블록을 찾기 위해 더 많은 시간(계산)이 필요하다 (힙이 파편화되어 있으면 더욱 그렇다).</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">동적 메모리 할당기</title><link href="http://localhost:4000/computer_science/2024-02-07-allocator/" rel="alternate" type="text/html" title="동적 메모리 할당기" /><published>2024-02-07T20:00:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/allocator</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-allocator/"><![CDATA[<ul class="large-only" id="markdown-toc">
+메모리 할당 시 적절한 메모리 블록을 찾기 위해 더 많은 시간(계산)이 필요하다 (힙이 파편화되어 있으면 더욱 그렇다).</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">동적 메모리 할당기</title><link href="http://localhost:4000/coding/baekjoon/2024-02-07-allocator/" rel="alternate" type="text/html" title="동적 메모리 할당기" /><published>2024-02-07T20:00:00+09:00</published><updated>2024-02-20T23:25:29+09:00</updated><id>http://localhost:4000/coding/baekjoon/allocator</id><content type="html" xml:base="http://localhost:4000/coding/baekjoon/2024-02-07-allocator/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#동적-메모리-할당기" id="markdown-toc-동적-메모리-할당기">동적 메모리 할당기</a>    <ul>
       <li><a href="#명시적-할당기-1" id="markdown-toc-명시적-할당기-1">명시적 할당기</a></li>
       <li><a href="#묵시적-할당기-1" id="markdown-toc-묵시적-할당기-1">묵시적 할당기</a></li>
@@ -182,7 +202,7 @@ C++ 에서는 <code class="language-plaintext highlighter-rouge">new()</code>와
 <p>묵시적 할당기는 할당된 블록이 더 이상 프로그램에 의해 사용되지 않는지 할당기가 검출할 수 있을 것을 요구하며, <br />
 이러한 검출을 통해 블록의 반환이 별도의 함수 호출 없이 이루어진다.<br />
 묵시적 할당기는 <i>garbage collector</i>라고도 알려져 있으며, 자동으로 사용하지 않는 할당된 블록을 반환하는 작업을 가비지 컬렉션이라고 부른다. <br />
-List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="Computer_Science" /></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
+List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위해 가비지 컬렉션을 사용한다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="coding" /><category term="baekjoon" /></entry><entry><title type="html">MMAP &amp;amp; MUNMAP</title><link href="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/" rel="alternate" type="text/html" title="MMAP &amp;amp; MUNMAP" /><published>2024-02-07T15:43:00+09:00</published><updated>2024-02-17T00:06:58+09:00</updated><id>http://localhost:4000/computer_science/mmap_munmap</id><content type="html" xml:base="http://localhost:4000/computer_science/2024-02-07-mmap_munmap/"><![CDATA[<ul class="large-only" id="markdown-toc">
   <li><a href="#mmap" id="markdown-toc-mmap">MMAP</a>    <ul>
       <li><a href="#address-1" id="markdown-toc-address-1">address</a></li>
       <li><a href="#length-1" id="markdown-toc-length-1">length</a></li>
@@ -499,39 +519,4 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
   <li><a href="#배열" id="markdown-toc-배열">배열</a></li>
 </ul>
 
-<h2 id="배열">배열</h2>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /><category term="자료구조" /></entry><entry><title type="html">스택과 큐</title><link href="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/" rel="alternate" type="text/html" title="스택과 큐" /><published>2024-01-11T15:00:00+09:00</published><updated>2024-02-20T22:40:49+09:00</updated><id>http://localhost:4000/cs/datastructure/stack_queue</id><content type="html" xml:base="http://localhost:4000/cs/datastructure/2024-01-11-stack_queue/"><![CDATA[<ul id="markdown-toc">
-  <li><a href="#스택" id="markdown-toc-스택">스택</a>    <ul>
-      <li><a href="#overflowunderflow" id="markdown-toc-overflowunderflow">Overflow/Underflow</a></li>
-    </ul>
-  </li>
-  <li><a href="#큐" id="markdown-toc-큐">큐</a></li>
-</ul>
-
-<p>컴퓨터에서 자주 사용되는 스택과 큐라는 자료구조에 대해서 알아보자.</p>
-
-<h2 id="스택">스택</h2>
-<p><br />
-스택은 데이터의 삽입과 삭제가 한 쪽에서만 이루어지는 선형 자료구조이다. <br />
-이러한 삽입과 삭제 구조로 인해 스택에서의 데이  터 삭제는 삽입된 순서의 역순으로 삭제되는 특징을 가지며,<br />
-이를 <b>선입후출</b> 또는 <b>후입선출</b>, 영어로 <b>Last In First Out</b>, 줄여서 <b>LIFO</b>라고 한다.<br />
-스택에서는 삽입과 삭제라는 용어보다는 Push와 Pop이라는 용어를 사용한다.</p>
-
-<p class="figcaption"><img src="/assets/img/postimg/cs/datastructure/stack_queue/stack_1.png" alt="pushpop" />      <br />
-스택의 푸시/팝 연산 <i>출처: https://www.programiz.com/dsa/stack</i></p>
-
-<p>일반적으로 가장 위 데이터가 쌓여있는 위치를 Top이라고 부른다.</p>
-
-<h3 id="overflowunderflow">Overflow/Underflow</h3>
-<p><br />
-오버플로우는 스택에 삽입 연산을 수행할 때 발생하는 문제이며, 이는 스택을 위해 할당된 저장 공간이 초과되어 더 이상 데이터를 삽입할 수 없는 상황을 말한다.</p>
-
-<p>반대로, 언더플로우는 삭제 연산을 수행할 때 발생하며, 스택에 데이터가 없는 상태에서 삭제를 시도할 때 일어나는 문제이다.</p>
-
-<h2 id="큐">큐</h2>
-<p><br />
-큐는 데이터의 삽입과 삭제가 서로 다른 쪽에서 이루어지는 선형 자료구조이다. 
-그럼으로, 스택과는 달리 삽입된 순서로 데이터가 삭제되며 이는 <b>선입선출</b> 형식이며, 영어로 <b>First In First Out</b> 줄여서 <b>FIFO</b>라고 한다.</p>
-
-<p>큐의 앞부분을 Front, 뒷부분을 Rear라고 한다.<br />
-큐의 Front와 Rear는 모두 처음에 -1에서 시작한다(F = R = -1).<br />
-데이터가 삽입이 될 수록 Rear는 한 칸씩 뒤로 이동하며, 데이터가 삭제될 시 Front가 뒤로 한 칸씩 움직인다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /><category term="자료구조" /></entry></feed>
+<h2 id="배열">배열</h2>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="datastructure" /><category term="자료구조" /></entry></feed>

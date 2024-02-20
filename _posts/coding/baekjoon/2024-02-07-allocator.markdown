@@ -2,7 +2,7 @@
 layout: post
 title: "동적 메모리 할당기"
 date: 2024-02-07 20:00:00 +0900
-categories: Computer_Science
+categories: [coding,baekjoon]
 ---
 * 동적 메모리 할당기
 ## 명시적 할당기  
