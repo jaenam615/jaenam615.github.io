@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T17:26:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-02-20T19:40:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Jae’s Blog</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
 </subtitle><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><entry><title type="html">완전탐색</title><link href="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/" rel="alternate" type="text/html" title="완전탐색" /><published>2024-02-17T20:00:00+09:00</published><updated>2024-02-20T17:06:51+09:00</updated><id>http://localhost:4000/cs/algorithm/exhaustive-search</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-02-17-exhaustive-search/"><![CDATA[<ul id="markdown-toc">
   <li><a href="#완전탐색" id="markdown-toc-완전탐색">완전탐색</a></li>
 </ul>
@@ -314,7 +314,7 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 <span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
 <span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">힙 정렬</title><link href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" rel="alternate" type="text/html" title="힙 정렬" /><published>2024-01-15T20:00:00+09:00</published><updated>2024-02-20T17:26:29+09:00</updated><id>http://localhost:4000/cs/algorithm/heapsort</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"><![CDATA[<ul id="markdown-toc">
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.]]></summary></entry><entry><title type="html">힙 정렬</title><link href="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/" rel="alternate" type="text/html" title="힙 정렬" /><published>2024-01-15T20:00:00+09:00</published><updated>2024-02-20T19:40:17+09:00</updated><id>http://localhost:4000/cs/algorithm/heapsort</id><content type="html" xml:base="http://localhost:4000/cs/algorithm/2024-01-15-heapsort/"><![CDATA[<ul id="markdown-toc">
   <li><a href="#힙" id="markdown-toc-힙">힙</a></li>
   <li><a href="#힙-정렬" id="markdown-toc-힙-정렬">힙 정렬</a></li>
 </ul>
@@ -332,10 +332,10 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
 
 <p>힙 자료구조를 사용하여 정렬하는 알고리즘이다.</p>
 
-<p>이는 배열로 표현된 트리를 다시 배열로 정렬하는 방식으로 구현하는데,<br />
+<p>힙 정렬은 배열로 표현된 트리의 값들을 이당(삭제 및 다시 삽입)시켜 다시 배열로 정렬하는 방식으로 구현하는데,<br />
 힙 배열의 루트에서 원소를 삭제하여 줄어든 힙 배열 크기 뒤에 남는 공간에 삭제한 원소를 도로 넣음으로 정렬을 한다.<br />
 <br />
-<img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F2133cb71-0c2c-48db-a62c-da90ddfc6ff9%2FUntitled.png?table=block&amp;id=3de1282c-d289-4b0b-8620-eb0006f54d8c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=2000&amp;userId=&amp;cache=v2" alt="initialheap" width="500" /></p>
+<img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F2133cb71-0c2c-48db-a62c-da90ddfc6ff9%2FUntitled.png?table=block&amp;id=3de1282c-d289-4b0b-8620-eb0006f54d8c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=2000&amp;userId=&amp;cache=v2" alt="initialheap" width="550" /></p>
 
 <table>
   <tbody>
@@ -351,9 +351,74 @@ List, ML, Java같은 고급 언어는 할당된 블록들을 반환시키기 위
   </tbody>
 </table>
 
-<p>위는 값들이 들어간 힙과 해당 힙이 배열로 표현된 것이다.</p>
+<p>위는 값들이 들어간 힙과 그에 대응되는 배열을 시각적으로 표현한 것이다.</p>
 
 <p>힙 정렬을 하려면 값들을 삭제해야 하는데, 힙에서의 삭제는 루트 노드에서만 이루어진다.<br />
 주의해야 할 점은, <b>삭제되는 값 자체는 루트 노드의 값이지만, 삭제되는 노드는 단말 노드라는 점이다.</b><br />
 삭제되는 노드는 단말 노드, 그 중 가장 오른쪽의 노드여야 하는데<br />
-이것은 항상 완전 이진 트리를 유지해야 하기 때문이다.</p>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /><category term="알고리즘" /><category term="정렬" /></entry></feed>
+이는 힙이 항상 완전 이진 트리를 유지해야 하기 때문이다.</p>
+
+<p>힙 정렬을 할 때 삭제되는 값은 루트 노드에 있는 값(가장 큰 값)이기 때문에<br />
+루트 노드에 있는 값인 50을 먼저 삭제하고자 한다. 
+다만 앞서 말했듯이 힙은 완전 이진 트리의 형태를 유지해야 함으로<br />
+50의 위치를 최하위 레벨의 가장 우측 노드에 있는 값과 바꿔주고 50을 삭제한다.</p>
+
+<!-- ![switched](https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F41546254-da8f-4882-a6e4-23bfc26797e5%2FUntitled.png?table=block&id=560182cf-659f-4e30-8bc3-ed56ab2d7179&spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&width=2000&userId=&cache=v2){: width="550" height="320";}
+
+|  16  |  30  |  20  |  15  |  10  |   8  |  50  | -->
+<p class="figcaption"><img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F3b52846b-e4ae-48a5-bfa0-066290ee20dd%2FUntitled.png?table=block&amp;id=8578cff7-0a0a-4709-9288-72c02c4e6a81&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=930&amp;userId=&amp;cache=v2" alt="deleted" width="550" /><br />
+50 삭제 후의 트리</p>
+
+<style>
+    td:nth-child(7) { background: lightgrey!important;}
+</style>
+
+<table>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td>30</td>
+      <td>20</td>
+      <td>15</td>
+      <td>10</td>
+      <td>8</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이 때, 비어있게 된 위치에 삭제된 값을 넣으면 추가적인 공간 할당 필요 없이<br />
+가장 큰 값을 뒤 여유 공간에 위치하게 할 수 있다.</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>16</td>
+      <td>30</td>
+      <td>20</td>
+      <td>15</td>
+      <td>10</td>
+      <td>8</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>이제 50을 삭제하였으니 조정을 하여 다시 힙을 만들어야 한다.
+16을 그 자식 노드들과 비교하여 큰 값과 바꿔주고 필요시 이를 반복하면 된다.</p>
+
+<p><img src="https://janam.notion.site/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fd6bf389f-51e5-4356-b4a7-6b4bd35c1d89%2F45f0a677-9c9f-4d01-a9a4-a1dd6c48a9e4%2FUntitled.png?table=block&amp;id=8695fe0a-b01d-4088-8f95-3c4801e2c27c&amp;spaceId=d6bf389f-51e5-4356-b4a7-6b4bd35c1d89&amp;width=1160&amp;userId=&amp;cache=v2" alt="rebalancing" width="550" /></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>30</td>
+      <td>16</td>
+      <td>20</td>
+      <td>15</td>
+      <td>10</td>
+      <td>8</td>
+      <td>50</td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>Jaehee Nam</name><email>jaenam2060@gmail.com</email></author><category term="cs" /><category term="algorithm" /><category term="알고리즘" /><category term="정렬" /></entry></feed>
