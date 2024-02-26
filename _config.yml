@@ -59,6 +59,8 @@ menu:
         url: /datastructure/
       - title: Algorithm
         url: /algorithm/
+      - title: Network
+        url: /network/
   - title: Coding
     url: /coding/
     submenu: 
