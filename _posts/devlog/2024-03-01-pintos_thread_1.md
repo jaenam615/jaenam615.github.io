@@ -49,7 +49,8 @@ timer_sleep (int64_t ticks) {
 thread 구조체에 '일어날'시간을 지정해줄 변수를 추가하고, `thread_sleep` 함수를 만들어 `timer_sleep`에서 이를 호출하게 했다.  
 `sleep_list`라는 리스트를 만들어 `thread_sleep`함수에서 해당 리스트에 일어나는 시간이 빠른 쓰레드 순으로 정렬되게 넣어줬다.  
 이후, `timer_interrupt`함수에서 `thread_wakeup` 함수를 매 틱마다 호출해 일어날 시간이 된 쓰레드가 있는지 탐색하도록 했다.  
-여기서 효율을 올린 방법은, 정렬을 제대로 해주었기 떄문에 탐색 중 일어날 시간이 안 된 쓰레드를 만나면 멈추게 하였다. 
+여기서 효율을 올린 방법은, 정렬을 제대로 해주었기 떄문에 리스트의 가장 앞 원소만 확인하여 (즉, 일어날 시간이 가장 빠른 쓰레드)  
+시간이 됐을 시 `ready_list`로 삽입하고 아닐 시 그대로 두고 함수를 끝내는 방식으로 구현했다.  
 
 > Alarm Clock 기본 작동 방식<br/>
 > <b> timer_sleep & thread_sleep </b>
@@ -112,10 +113,6 @@ void thread_wakeup(int64_t ticks) {
     if (checker->sleep_ticks <= (ticks)) {
       waking_up = list_pop_front(&sleep_list);
       list_push_back(&ready_list, waking_up);
-    } else {
-      break;
-    }
-
 
   intr_set_level(old_level);
 }
@@ -131,10 +128,38 @@ static bool sleep_list_order(const struct list_elem *a_, const struct list_elem 
 ```
 ---
 
-> <b> KEY POINT </b>
+다음 과제는 Alarm-Simultaneous 라고, 동시에 깨어나는 쓰레드들을 모두 ready_list에 넣어주는 과제였다. 
+이를 해결하기 위해서는 구조를 살짝 변경해야 했는데,  
+현재까지는 `sleep_list`의 가장 앞 원소만 확인했지만 이제는 여러 원소를 확인할 필요가 있었기 때문이다.  
+
+아래와 같이 전체 코드를 while문으로 감싸준 후 시간이 되지 않은 원소를 발견할 때 탈출하는 구조로 구현했다. 
+이런 방식을 채택하면 시간이 된 쓰레드를 찾으면 바로 다음의 쓰레드도 확인하기 떄문에 다수의 쓰레드가 일어날 조건이 달성되면  
+모두 깨워서 `ready_list`에 넣을 수 있다.  
+
+```c
+void thread_wakeup(int64_t ticks) {
+  enum intr_level old_level;
+  old_level = intr_disable();
+
+  while (!list_empty(&sleep_list)) {
+    struct list_elem *waking_up = list_front(&sleep_list);
+    struct thread *checker = list_entry(waking_up, struct thread, elem);
+
+    if (checker->sleep_ticks <= (ticks)) {
+      waking_up = list_pop_front(&sleep_list);
+      list_push_back(&ready_list, waking_up);
+    } else {
+      break;
+    }
+  }
+}
+```
+
+> <b> ALARM CLOCK KEY POINT </b>
 > 효율성을 올리기 위해 `sleep_ticks`가 적은 순으로 정렬 
 > 시간이 안 된 쓰레드를 찾으면 탐색 중지 
 > 인터럽트를 끈 상태로 리스트를 조작하기 때문에 레이스 컨디션 회피 
 {: .prompt-info}
 
+<hr>
 
