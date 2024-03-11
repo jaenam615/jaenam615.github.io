@@ -43,4 +43,83 @@ timer_sleep (int64_t ticks) {
 기존 timer_sleep 함수
 {:.figcaption}
 
-지난 시간이 현재의 ticks를 넘으면 
+이 문제에서 가장 개념을 잡기 어려웠던 부분은, 시간이 다 될때까지 기다리는 것이 아니라 진짜 알람처럼 특정한 시간이 되면 호출하여 부르게 해야 한다는 점이었다.  
+이를 이해하기까지 시간이 꽤 걸렸지만, 이해하고 나서부터는 큰 어려움 없이 진행했다.  
+
+thread 구조체에 '일어날'시간을 지정해줄 변수를 추가하고, `thread_sleep` 함수를 만들어 `timer_sleep`에서 이를 호출하게 했다.  
+`sleep_list`라는 리스트를 만들어 `thread_sleep`함수에서 해당 리스트에 일어나는 시간이 빠른 쓰레드 순으로 정렬되게 넣어줬다.  
+이후, `timer_interrupt`함수에서 `thread_wakeup` 함수를 매 틱마다 호출해 일어날 시간이 된 쓰레드가 있는지 탐색하도록 했다.  
+여기서 효율을 올린 방법은, 정렬을 제대로 해주었기 떄문에 탐색 중 일어날 시간이 안 된 쓰레드를 만나면 멈추게 하였다. 
+
+```c
+struct thread {
+	tid_t tid;                        
+	enum thread_status status;         
+	char name[16];                     
+	int priority;                       
+    int64_t sleep_ticks; // 해당 변수 추가
+
+	struct list_elem elem;     
+
+    //등등
+}
+
+void
+timer_sleep (int64_t ticks) {
+	
+	int64_t start = timer_ticks ();
+=
+	ASSERT(intr_get_level() == INTR_ON);
+
+	thread_sleep(ticks+start);
+	//등등
+}
+
+void thread_sleep(int64_t ticks){
+
+	struct thread *t = thread_current();
+	enum intr_level old_level;
+	t->sleep_ticks = ticks;
+
+	old_level = intr_disable();
+	list_insert_ordered(&sleep_list, &t->elem, sleep_list_order, NULL);
+	thread_block();
+	intr_set_level(old_level);
+}
+
+
+void thread_wakeup(int64_t ticks) {
+  enum intr_level old_level;
+  old_level = intr_disable();
+
+    struct list_elem *waking_up = list_front(&sleep_list);
+    struct thread *checker = list_entry(waking_up, struct thread, elem);
+
+    if (checker->sleep_ticks <= (ticks)) {
+      waking_up = list_pop_front(&sleep_list);
+      list_push_back(&ready_list, waking_up);
+    } else {
+      break;
+    }
+
+
+  intr_set_level(old_level);
+}
+
+static bool sleep_list_order(const struct list_elem *a_, const struct list_elem *b_,
+            void *aux UNUSED){
+  const struct thread *a = list_entry (a_, struct thread, elem);
+  const struct thread *b = list_entry (b_, struct thread, elem);
+
+  return a->sleep_ticks < b->sleep_ticks;
+}
+
+```
+---
+
+> Alarm Clock 기본 작동 방식<br/>
+> <b> timer_sleep & thread_sleep </b>
+> <li>인터럽트 비활성화
+> <li>`sleep_list`에 쓰레드 삽입 및 블락
+> <li>인터럽트 다시 활성화
+{: .prompt-info}
