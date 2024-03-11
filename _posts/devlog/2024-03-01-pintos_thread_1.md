@@ -51,6 +51,20 @@ thread 구조체에 '일어날'시간을 지정해줄 변수를 추가하고, `t
 이후, `timer_interrupt`함수에서 `thread_wakeup` 함수를 매 틱마다 호출해 일어날 시간이 된 쓰레드가 있는지 탐색하도록 했다.  
 여기서 효율을 올린 방법은, 정렬을 제대로 해주었기 떄문에 탐색 중 일어날 시간이 안 된 쓰레드를 만나면 멈추게 하였다. 
 
+> Alarm Clock 기본 작동 방식<br/>
+> <b> timer_sleep & thread_sleep </b>
+> <li>인터럽트 비활성화
+> <li>`sleep_list`에 쓰레드 삽입 및 블락
+> <li>인터럽트 다시 활성화
+
+> <b> timer_interrupt </b>
+> <li>일어나야 하는 쓰레드가 있는지 확인
+> <li>있다면 `sleep_tick` 초기화
+> <li>인터럽트 비활성화 후 리스트에서 제거 및 언블락 
+> <li>인터럽트 다시 활성화
+{: .prompt-info}
+
+## 코드
 ```c
 struct thread {
 	tid_t tid;                        
@@ -117,9 +131,10 @@ static bool sleep_list_order(const struct list_elem *a_, const struct list_elem 
 ```
 ---
 
-> Alarm Clock 기본 작동 방식<br/>
-> <b> timer_sleep & thread_sleep </b>
-> <li>인터럽트 비활성화
-> <li>`sleep_list`에 쓰레드 삽입 및 블락
-> <li>인터럽트 다시 활성화
+> <b> KEY POINT </b>
+> 효율성을 올리기 위해 `sleep_ticks`가 적은 순으로 정렬 
+> 시간이 안 된 쓰레드를 찾으면 탐색 중지 
+> 인터럽트를 끈 상태로 리스트를 조작하기 때문에 레이스 컨디션 회피 
 {: .prompt-info}
+
+
