@@ -162,4 +162,3 @@ void thread_wakeup(int64_t ticks) {
 {: .prompt-info}
 
 <hr>
-
