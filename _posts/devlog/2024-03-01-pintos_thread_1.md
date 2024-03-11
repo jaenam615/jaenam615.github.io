@@ -83,7 +83,7 @@ void
 timer_sleep (int64_t ticks) {
 	
 	int64_t start = timer_ticks ();
-=
+
 	ASSERT(intr_get_level() == INTR_ON);
 
 	thread_sleep(ticks+start);
@@ -156,9 +156,9 @@ void thread_wakeup(int64_t ticks) {
 ```
 
 > <b> ALARM CLOCK KEY POINT </b>
-> 효율성을 올리기 위해 `sleep_ticks`가 적은 순으로 정렬 
-> 시간이 안 된 쓰레드를 찾으면 탐색 중지 
-> 인터럽트를 끈 상태로 리스트를 조작하기 때문에 레이스 컨디션 회피 
+> <li>효율성을 올리기 위해 `sleep_ticks`가 적은 순으로 정렬 
+> <li>시간이 안 된 쓰레드를 찾으면 탐색 중지 
+> <li>인터럽트를 끈 상태로 리스트를 조작하기 때문에 레이스 컨디션 회피 
 {: .prompt-info}
 
 <hr>
