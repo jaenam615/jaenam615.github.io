@@ -8,5 +8,5 @@ pin: false
 math: true
 mermaid: true
 image:
-path:
+  path:
 ---
