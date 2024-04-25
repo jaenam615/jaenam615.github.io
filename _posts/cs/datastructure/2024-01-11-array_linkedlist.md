@@ -1,12 +1,14 @@
 ---
-layout: post
 title: "배열과 연결 리스트"
-date: 2024-01-11 15:00:00 +0900
-categories: [cs,datastructure]
-tags: [자료구조]
+writer: James
+date: 2024-01-11 15:12:00 +0900
+categories: [cs, data_structure]
+tags: [cs, data_structure]
+pin: false
+math: true
+mermaid: true
+image:
+  path:
 ---
-* toc
-{:toc}
 
-## 배열 
-
+## 배열
