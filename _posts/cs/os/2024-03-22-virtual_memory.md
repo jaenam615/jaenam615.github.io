@@ -8,7 +8,6 @@ pin: false
 math: true
 mermaid: true
 image:
-  path:
 ---
 
 ## 가상 메모리

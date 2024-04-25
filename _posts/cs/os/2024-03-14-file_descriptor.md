@@ -8,7 +8,6 @@ pin: false
 math: true
 mermaid: true
 image:
-  path:
 ---
 
 ## 파일 디스크립터
