@@ -2,8 +2,8 @@
 title: "핀토스 프로젝트 1 - Threads (1)"
 writer: James
 date: 2024-03-01 20:30:00 +0900
-categories: [devlog, pintos, jungle, os]
-tags: [devlog, pintos, jungle, os]
+categories: [jungle, pintos]
+tags: [jungle, pintos, os]
 pin: false
 math: true
 mermaid: true
