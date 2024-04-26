@@ -2,13 +2,13 @@
 title: "핀토스 프로젝트 1 - Threads (2)"
 writer: James
 date: 2024-03-02 21:33:59 +0900
-categories: [devlog, pintos, jungle, os]
-tags: [devlog, pintos, jungle, os]
+categories: [jungle, pintos]
+tags: [jungle, pintos, os]
 pin: false
 math: true
 mermaid: true
 image:
-path:
+	path: https://github.com/jaenam615/jaenam615.github.io/blob/main/assets/img/jungle/pintos-kaist-threads.png?raw=true
 ---
 
 ## 우선순위 스케줄링
