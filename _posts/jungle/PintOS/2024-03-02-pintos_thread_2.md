@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-	path: https://github.com/jaenam615/jaenam615.github.io/blob/main/assets/img/jungle/pintos-kaist-threads.png?raw=true
+  path: https://github.com/jaenam615/jaenam615.github.io/blob/main/assets/img/jungle/pintos-kaist-threads.png?raw=true
 ---
 
 ## 우선순위 스케줄링
