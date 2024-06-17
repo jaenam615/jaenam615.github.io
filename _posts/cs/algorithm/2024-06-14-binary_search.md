@@ -35,7 +35,7 @@ image:
 
 이진 탐색은 다음과 같이 표현할 수 있다: 
 
-```Python
+```python
 def binarySearch(a : Sequence, key : Any, left : Any, right : Any) -> int:
   #배열 a에서 key와 일치하는 원소를 이진 탐색
   left = 0                            # 검색 범위 맨 앞 원소의 인덱스
