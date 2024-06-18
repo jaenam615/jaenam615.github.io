@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/jaenam615/jaenam615.github.io/assets/155196757/32393ec9-a077-403c-9432-ddc9d4c343d7
+  path: https://media.disquiet.io/images/makerlog/084fd1b051cc55562045b03e7a50294b599336b537eabfcf6f0d3adf5d5aeee1
 ---
 
 ## 분할 정복
@@ -24,6 +24,9 @@ image:
 
 작게 분할된 문제들은 처리 대상이 되는 입력의 크기가 작아졌을 뿐이며,  
 이 작아진 문제들은 원래 문제의 성격과 특징을 공유한다.  
+
+![divide_conquer](https://media.disquiet.io/images/makerlog/084fd1b051cc55562045b03e7a50294b599336b537eabfcf6f0d3adf5d5aeee1)
+*출처: [DISQUIET](https://disquiet.io/@offlight_jean/makerlog/%ED%83%9C%EC%8A%A4%ED%81%AC-%EA%B4%80%EB%A6%AC%EC%9D%98-%EB%8B%A8%EA%B3%84%EB%B3%84-%EC%A0%84%EB%9E%B5-%EB%B6%84%ED%95%A0%EC%A0%95%EB%B3%B5%EB%B2%95%EC%9C%BC%EB%A1%9C-%EC%97%85%EB%AC%B4-%EC%83%9D%EC%82%B0%EC%84%B1-%EB%86%92%EC%9D%B4%EA%B8%B0)*
 
 ## 장점
 
