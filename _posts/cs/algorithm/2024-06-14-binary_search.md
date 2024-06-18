@@ -53,11 +53,11 @@ def binarySearch(a : Sequence, key : Any, left : Any, right : Any) -> int:
 ```
 
 <b>입력:<b>  
-- A[] : 전체 입력 배열. 오름차순으록 정렬되어 있다고 가정
+- a : 전체 입력 배열. 오름차순으록 정렬되어 있다고 가정
 - key : 탐색 키
-- left, right : 탐색 대상 구간. A[left..right]에 서 key를 찾아야 함
+- left, right : 탐색 대상 구간. a[left..right]에 서 key를 찾아야 함
 <b>출력:<b>   
-- key가 A[]내에 존재하면 해당 인덱스, 존재하지 않을 시 -1 반환  
+- key가 a[right..left]내에 존재하면 해당 인덱스, 존재하지 않을 시 -1 반환  
 
 ## 성능 및 특징
 
