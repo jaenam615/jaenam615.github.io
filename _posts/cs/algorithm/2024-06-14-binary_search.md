@@ -47,9 +47,10 @@ def binarySearch(a : Sequence, key : Any, left : Any, right : Any) -> int:
   if a[mid] == key:         
     return mid                        # 탐색 성공, 인덱스 반환
   elif a[mid] < key:      
-    binarySearch(a, key, left, mid-1)  # 탐색 범위를 뒤쪽 절반으로 축소
+    ans = binarySearch(a, key, left, mid-1)  # 탐색 범위를 뒤쪽 절반으로 축소
   else:
-    binarySearch(a, key, mid+1, right) # 탐색 범위를 앞쪽 절반으로 축소       
+    ans = binarySearch(a, key, mid+1, right) # 탐색 범위를 앞쪽 절반으로 축소       
+  return ans
 ```
 
 <b>입력:<b>  
