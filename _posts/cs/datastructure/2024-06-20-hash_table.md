@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path:
+  path: https://blog.kakaocdn.net/dn/b1zOw1/btqL6HAW7jy/jpBA5pPkQFnfiZcPLakg00/img.png
 ---
 
 ## 해시 테이블 
