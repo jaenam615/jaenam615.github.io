@@ -1,7 +1,7 @@
 ---
 title: "Direct Memory Access"
 writer: James
-date: 2024-06-26 22:00:14 +0900
+date: 2024-06-27 22:00:14 +0900
 categories: [cs, os]
 tags: [cs, os, dma]
 pin: false
