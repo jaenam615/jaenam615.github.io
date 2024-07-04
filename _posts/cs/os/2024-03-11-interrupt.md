@@ -3,7 +3,7 @@ title: "인터럽트"
 writer: James
 date: 2024-03-11 19:30:00 +0900
 categories: [cs, os]
-tags: [cs, os]
+tags: [cs, os, 운영체제]
 pin: false
 math: true
 mermaid: true

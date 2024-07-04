@@ -3,7 +3,7 @@ title: "원자적 연산"
 writer: James
 date: 2024-03-11 14:30:00 +0900
 categories: [cs, os]
-tags: [cs, os]
+tags: [cs, os, 운영체제]
 pin: false
 math: true
 mermaid: true

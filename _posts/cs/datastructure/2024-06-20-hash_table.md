@@ -2,8 +2,8 @@
 title: "해시 테이블"
 writer: James
 date: 2024-06-20 20:11:19 +0900
-categories: [cs, data_structure]
-tags: [cs, data_structure]
+categories: [cs, data structure]
+tags: [cs, data structure, 자료구조, 해시, hash]
 pin: false
 math: true
 mermaid: true

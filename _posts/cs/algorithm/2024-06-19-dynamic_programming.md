@@ -3,7 +3,7 @@ title: "동적 프로그래밍"
 writer: James
 date: 2024-06-19 01:00:00 +0900
 categories: [cs, algorithm]
-tags: [cs, algorithm]
+tags: [cs, algorithm, dp, 동적계획법, 알고리즘]
 pin: false
 math: true
 mermaid: true

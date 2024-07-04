@@ -3,7 +3,7 @@ title: "이진탐색"
 writer: James
 date: 2024-06-14 16:50:47 +0900
 categories: [cs, algorithm]
-tags: [cs, algorithm]
+tags: [cs, algorithm, 알고리즘, 이진탐색, 이분탐색, binary search]
 pin: false
 math: true
 mermaid: true

@@ -2,8 +2,8 @@
 title: "스택과 큐"
 writer: James
 date: 2024-01-11 15:00:00 +0900
-categories: [cs, data_structure]
-tags: [cs, data_structure]
+categories: [cs, data structure]
+tags: [cs, data structure, 자료구조, 스택, 큐]
 pin: false
 math: true
 mermaid: true

@@ -3,7 +3,7 @@ title: "완전탐색"
 writer: James
 date: 2024-02-17 20:38:47 +0900
 categories: [cs, algorithm]
-tags: [cs, algorithm]
+tags: [cs, algorithm, 탐색, 알고리즘]
 pin: false
 math: true
 mermaid: true

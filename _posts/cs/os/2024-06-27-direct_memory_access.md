@@ -3,7 +3,7 @@ title: "Direct Memory Access"
 writer: James
 date: 2024-06-27 22:00:14 +0900
 categories: [cs, os]
-tags: [cs, os, dma]
+tags: [cs, os, dma, 운영체제]
 pin: false
 math: true
 mermaid: true

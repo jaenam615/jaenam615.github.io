@@ -3,7 +3,7 @@ title: "세그멘테이션 오류"
 writer: James
 date: 2024-03-11 20:33:00 +0900
 categories: [cs, os]
-tags: [cs, os]
+tags: [cs, os, 운영체제]
 pin: false
 math: true
 mermaid: true

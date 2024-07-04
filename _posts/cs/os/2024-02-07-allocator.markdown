@@ -3,7 +3,7 @@ title: "동적 메모리 할당기"
 writer: James
 date: 2024-02-07 18:28:55 +0900
 categories: [cs, os]
-tags: [cs, os]
+tags: [cs, os, 운영체제]
 pin: false
 math: true
 mermaid: true

@@ -3,7 +3,7 @@ title: "분할정복"
 writer: James
 date: 2024-06-18 18:00:00 +0900
 categories: [cs, algorithm]
-tags: [cs, algorithm]
+tags: [cs, algorithm, 알고리즘, 분할정복]
 pin: false
 math: true
 mermaid: true
