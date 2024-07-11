@@ -1,7 +1,7 @@
 ---
 title: "동기화 - 뮤텍스와 세마포어"
 writer: James
-date: 2024-06-27 22:00:14 +0900
+date: 2024-07-11 13:00:14 +0900
 categories: [cs, os]
 tags: [cs, os, 뮤텍스, 세마포어, mutex, semaphore, 운영체제]
 pin: false
