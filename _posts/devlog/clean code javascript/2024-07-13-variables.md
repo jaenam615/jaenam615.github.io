@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/jaenam615/jaenam615.github.io/assets/155196757/65e27245-2b82-4b56-94f6-22ab454f9984
+  path: https://img-b.udemycdn.com/course/750x422/4253080_1e23.jpg
 ---
 
 ## var를 지양하자  
