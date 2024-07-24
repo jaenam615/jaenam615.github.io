@@ -1,7 +1,7 @@
 ---
 title: "메모리 할당 정책"
 writer: James
-date: 2024-07-11 13:00:14 +0900
+date: 2024-07-24 13:00:14 +0900
 categories: [cs, os]
 tags: [cs, os, memory, 운영체제]
 pin: false
