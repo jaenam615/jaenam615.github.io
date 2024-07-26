@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/jaenam615/jaenam615.github.io/assets/155196757/6c85f87f-0fee-4577-ad52-302741842d29
+  path: https://images.velog.io/images/dnflekf2748/post/3ae851c0-f5a1-4b24-a9f0-00dd4d1efe2d/%EC%84%9C%EB%B2%84%ED%81%B4%EB%9D%BC%EC%9D%B4%EC%96%B8.png
 ---
 
 ## 클라이언트 서버 구조  
