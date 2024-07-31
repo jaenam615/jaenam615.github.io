@@ -1,5 +1,5 @@
 ---
-title: "핀토스 프로젝트 1 - Threads (2)"
+title: "핀토스: 프로젝트 1 - Threads (2)"
 writer: James
 date: 2024-03-02 21:33:59 +0900
 categories: [jungle, pintos]
