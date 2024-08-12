@@ -1,5 +1,5 @@
 ---
-title: "클린 코드 자바스크립트 - 변수 다루기"
+title: "클린 코드 자바스크립트 : 변수 다루기"
 writer: James
 date: 2024-07-17 01:00:00 +0900
 categories: [devlog, clean code javascript]
