@@ -23,5 +23,8 @@
   "stylelint.validate": ["css", "less", "postcss", "scss"],
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
-  }
+  },
+  "pasteImage.basePath": "${projectRoot}/images/",
+  "pasteImage.path": "${projectRoot}/images/",
+  "pasteImage.prefix": "/images/"
 }
