@@ -1,7 +1,7 @@
 ---
 title: "SQLD: 정리"
 writer: James
-date: 2024-08-22 01:00:00 +0900
+date: 2024-08-23 01:00:00 +0900
 categories: [database, SQLD]
 tags: [database, SQLD]
 pin: false
@@ -173,4 +173,18 @@ UNBOUNDED : 범위 제한 없음
 CURRENT : 지금 행까지의  
 
 PARTITION이 있다면 해당 파티션 내까지만 범위로 한정짓는다.  
+
+## 키 
+
+![키](/images/2024-08-22-06-15-44.png)  
+
+## 파티션
+
+Range : 범위에 대한 파티션
+
+List : 파티션 범위를 직접 지정  
+
+Hash : 조건 X, 임의의 값을 주면 저장할 곳을 알아서 정의  
+
+Composite/Hybrid : 위를 조합하여 지정 
 
