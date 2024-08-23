@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://www.c-sharpcorner.com/article/sql-commands-ddl-dql-dml-dcl-tcl-with-examples/Images/SQL_Diagram.drawio.png
+  path: https://velog.velcdn.com/images/kimyeji203/post/ced6e087-6c06-4d68-8d88-526b180ece64/image.png
 ---  
 
 ## 시험 팁  
@@ -187,4 +187,19 @@ List : 파티션 범위를 직접 지정
 Hash : 조건 X, 임의의 값을 주면 저장할 곳을 알아서 정의  
 
 Composite/Hybrid : 위를 조합하여 지정 
+
+## 조인  
+
+- 카티션 조인 : 단순히 `FROM A, B`식으로 테이블 두 개를 기재. 결과는 전체 가능한 조합을 나타내며, A 테이블의 행 수 * B 테이블의 행 수로 결과가 나온다. ANSI에서는 `CROSS JOIN`이며 ON 조건이 붙을 수 없다.   
+- 이너 조인 : `FROM A, B`에다가 `WHERE A.D = B.C`라는 조건이 있다면 이너 조인이다. ANSI 방식에서는 `FROM A INNER JOIN B`에 WHERE 조건이 `ON (A.D = B.C)`라는 조건으로 붙는다. 추가적인 AND로 조건이 붙는다면 이것이 WHERE로 붙는다.  
+- 아우터 조인: `FROM A, B WHERE A.D = B.C(+)`등의 (+)기호가 붙으면 아우터 조인이다. ANSI 방식에서는 `FROM A LEFT OUTER JOIN`과 같이 (+)의 반대편을 가리킨다. `FULL OUTER JOIN`도 있는데, 이는 양쪽 테이블 모두 아우터 조인 하는 것이며 오라클 문법에서는 존재하지 않는다.  
+
+## 서브쿼리
+
+- 스칼라 서브쿼리 : SELECT에서 사용하는 서브쿼리 - 하나의 행과 하나의 컬럼이 결과로 나와야 한다. SELECT문에서 나오는 행의 개수만큼 실행되고, 하나의 투플에 하나의 컬럼으로 값을 찾는 것이기 때문에 당연히 하나의 값만 넣어져야 한다는 것이다.  
+아우터 조인으로 변경이 가능하다.  
+- 인라인 뷰 : 별도로 실행하여 테이블을 만들 수 있으며, 이를 조인할 수 있다. 
+- 중첩서브쿼리 : 상관과 비상관으로 나뉘며, 이는 메인쿼리와 관계가 있는지에 따라 달라진다. (메인쿼리의 **컬럼**이 있느냐 없느냐) 
+상관일 경우 메인쿼리가 먼저 실행되며, 비상관일 경우 서브쿼르를 먼저 실행해도 된다.  
+WHERE절에서 서브쿼리 결과를 받을 때는 단일행이 될 수 있으며 다중행이 될 수도 있다. 이 때 받을 수 있는 연산자가 나뉜다.  
 
