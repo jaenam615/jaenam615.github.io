@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/user-attachments/assets/3e1b494d-e7dc-4e88-a196-97caa8762fb8
+  path: https://github.com/user-attachments/assets/037d3524-6429-4686-8d6c-ac3be1777298
 ---
 
 ## 다시  
