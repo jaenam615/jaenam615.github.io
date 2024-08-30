@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/user-attachments/assets/037d3524-6429-4686-8d6c-ac3be1777298
+  path: https://github.com/user-attachments/assets/a3b8b50c-1c64-46e4-b24d-3d4f043dbfc7
 ---
 
 ## typeorm
