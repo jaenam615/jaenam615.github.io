@@ -1,5 +1,5 @@
 ---
-title: "corou : 엔터티/API feat 바보짓"
+title: "corou : 엔터티/API (feat. 바보짓)"
 writer: James
 date: 2024-08-30 16:00:00 +0900
 categories: [devlog, corou]
@@ -64,9 +64,12 @@ export const AppDataSource = new DataSource({
 ```
 *TypeORM 사용*  
 
+![나 뭐했니.](/images/2024-08-30-23-54-21.png)
+*나 뭐한거니...*
+
 ## 모델 정의
 
-![엔터티](/images/images/2024-08-30-23-20-22.png)  
+![엔터티](/images/2024-08-30-23-20-22.png)  
 
 이후에는 모델(엔터티)에 대한 코드를 만들어주었다.  
 
