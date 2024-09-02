@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/user-attachments/assets/a3b8b50c-1c64-46e4-b24d-3d4f043dbfc7
+  path: https://github.com/user-attachments/assets/ba6f3aaf-7c6e-4f2d-9f5e-dcf456f0e3fd
 ---
 
 ## corou
