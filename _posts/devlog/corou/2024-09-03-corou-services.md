@@ -8,8 +8,10 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/user-attachments/assets/ba6f3aaf-7c6e-4f2d-9f5e-dcf456f0e3fd
+  path: https://media.geeksforgeeks.org/wp-content/uploads/20220224160807/Model1.png
 ---
+
+*포스트 이미지는 GeeksforGeeks에서 퍼왔습니다*
 
 ## 엔터티 수정  
 
