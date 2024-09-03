@@ -1,5 +1,5 @@
 ---
-title: "corou : 엔터티/API (feat. 바보짓)"
+title: "corou : 엔터티/API Spec (feat. 바보짓)"
 writer: James
 date: 2024-08-30 16:00:00 +0900
 categories: [devlog, corou]
