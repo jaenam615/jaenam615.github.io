@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://github.com/user-attachments/assets/a7adbf8d-50ce-4448-b157-825e82e730b8
+  path: https://jaenam615.github.io/images/2024-09-09-22-38-43.png
 ---
 
 ## 의존성 주입  
