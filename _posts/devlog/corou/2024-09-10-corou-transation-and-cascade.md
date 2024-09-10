@@ -34,6 +34,14 @@ image:
 
 더 진행하다 보면 둘 모두 병행해서 쓸 수도 있겠지만, 현재 단계에서 연결된 자식 인스턴스들이 많은 경우가 없기 때문에 우선은 코드의 가시성에 더 비중을 두어 애플리케이션 단계에서 처리하기로 했다.  
 
+## 트랜잭션  
+
+이렇게 진행하다 보니 하나 더 고려해야 할 것이 생겼는데, 비록 try-catch문을 사용하고 있긴 이는 원자성을 보장하지 않는다.  
+
+일례로, 루틴에 대한 삭제를 하는데 Detail들만 삭제되고 Routine은 삭제되지 않으면 단계가 없는 빈 껍데기 Routine이 남는다는 것이다. 즉, 앞서 말한대로 컨트롤러에서 for loop로 `routineDetailService.deleteRoutineDetail`을 반복하여 실행하고, 마지막에 `routineService.deleteRoutine`을 해주면 문제가 생길 수 있다는 것이다.  
+
+이를 방지하기 위해 특정 메소드들을 원자적으로 만들 필요가 있는데, 이를 위한 것이 typeorm의 DataSource에 준비되어 있다.  
+
 ```typescript
 // routine.controller.ts
     async deleteRoutine(req: Request, res: Response): Promise<void> {
