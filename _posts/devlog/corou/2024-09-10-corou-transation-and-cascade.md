@@ -40,23 +40,20 @@ image:
 
 일례로, 루틴에 대한 삭제를 하는데 Detail들만 삭제되고 Routine은 삭제되지 않으면 단계가 없는 빈 껍데기 Routine이 남는다는 것이다. 즉, 앞서 말한대로 컨트롤러에서 for loop로 `routineDetailService.deleteRoutineDetail`을 반복하여 실행하고, 마지막에 `routineService.deleteRoutine`을 해주면 문제가 생길 수 있다는 것이다.  
 
-이를 방지하기 위해 특정 메소드들을 원자적으로 만들 필요가 있는데, 이를 위한 것이 typeorm의 DataSource에 준비되어 있다.  
+이를 방지하기 위해 특정 메소드들을 원자적으로 만들 필요가 있는데, 이를 위한 것이 typeorm의 DataSource 클래스가 준비되어 있다.     
 
 ```typescript
-// routine.controller.ts
-    async deleteRoutine(req: Request, res: Response): Promise<void> {
-        const routine_key = req.params.routine_key;
-        try {
-            const routine = await this.routineService.deleteRoutine(Number(routine_key));
-            res.status(200).json(routine);
-        } catch (error) {
-            res.status(500).json({ message: '루틴 삭제에 실패했습니다.' });
-        }
-    }
+//ormconfig.ts
+
+import { DataSource } from 'typeorm';
+
+container.registerInstance(DataSource, AppDataSource);
 ```
 
+우선 위와 같이 DataSource 클래스를 컨테이너에 등록한다. 이렇게 등록된 인스턴스는 다른 클래스나 함수에서 주입받아 사용할 수 있게 된다.  
+
 ```typescript
-// routine.service.ts
+// 변경된 routine.service.ts
     async deleteRoutine(routine_key: number): Promise<Routine> {
         return this.dataSource.transaction(async transactionalEntityManager => {
             const routine = await transactionalEntityManager.findOne(Routine, {
@@ -71,3 +68,37 @@ image:
         });
     }
 ```
+
+```typescript
+// 기존 routine.controller.ts
+    async deleteRoutine(req: Request, res: Response): Promise<void> {
+        const routine_key = req.params.routine_key;
+        try {
+            const details = await this.routineDetailService.find({where: routine_key });
+            for (detail in details){
+                await this.routineDetailService.deleteRoutineDetail(detail.step_number, detail.routine_key);
+            }
+            const routine = await this.routineService.deleteRoutine(Number(routine_key));
+            res.status(200).json(routine);
+        } catch (error) {
+            res.status(500).json({ message: '루틴 삭제에 실패했습니다.' });
+        }
+    }
+```
+
+```typescript
+// 변경된 routine.controller.ts
+    async deleteRoutine(req: Request, res: Response): Promise<void> {
+        const routine_key = req.params.routine_key;
+        try {
+            const routine = await this.routineService.deleteRoutine(Number(routine_key));
+            res.status(200).json(routine);
+        } catch (error) {
+            res.status(500).json({ message: '루틴 삭제에 실패했습니다.' });
+        }
+    }
+```
+
+컨트롤러 또한 위처럼 간소화해준다.  
+
+---
