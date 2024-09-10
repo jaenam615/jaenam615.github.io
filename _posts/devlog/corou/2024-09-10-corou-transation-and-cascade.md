@@ -32,4 +32,34 @@ image:
 - 삭제 순서를 잘못 지정할 시 데이터 무결성 문제가 발생할 수 있다.  
 - 여러 번의 데이터베이스 호출로 인해 네트워크 오버헤드가 발생할 수 있다.  
 
+더 진행하다 보면 둘 모두 병행해서 쓸 수도 있겠지만, 현재 단계에서 연결된 자식 인스턴스들이 많은 경우가 없기 때문에 우선은 코드의 가시성에 더 비중을 두어 애플리케이션 단계에서 처리하기로 했다.  
 
+```typescript
+// routine.controller.ts
+    async deleteRoutine(req: Request, res: Response): Promise<void> {
+        const routine_key = req.params.routine_key;
+        try {
+            const routine = await this.routineService.deleteRoutine(Number(routine_key));
+            res.status(200).json(routine);
+        } catch (error) {
+            res.status(500).json({ message: '루틴 삭제에 실패했습니다.' });
+        }
+    }
+```
+
+```typescript
+// routine.service.ts
+    async deleteRoutine(routine_key: number): Promise<Routine> {
+        return this.dataSource.transaction(async transactionalEntityManager => {
+            const routine = await transactionalEntityManager.findOne(Routine, {
+                where: { routine_key },
+                relations: ['routineDetails']
+            });
+            if (!routine) {
+                throw new Error('해당 루틴을 찾을 수 없습니다.');
+            }
+            await transactionalEntityManager.remove(routine);
+            return routine;
+        });
+    }
+```
