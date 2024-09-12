@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://jaenam615.github.io/images/2024-09-09-22-38-43.png
+  path: https://images.contentful.com/po4qc9xpmpuh/6jbcyfzdVJlc6XCUbzgMzb/96b1a9f0594f1d769f2254bd1abf25c1/database-transaction-1__1_.png
 ---
 
 ## Cascading  
