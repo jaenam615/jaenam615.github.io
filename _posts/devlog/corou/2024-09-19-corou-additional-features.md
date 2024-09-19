@@ -1,7 +1,7 @@
 ---
 title: "corou : 추가 기능 구현과 오류 잡기"
 writer: James
-date: 2024-09-10 11:00:00 +0900
+date: 2024-09-19 11:00:00 +0900
 categories: [devlog, corou]
 tags: [devlog, corou, side project]
 pin: false

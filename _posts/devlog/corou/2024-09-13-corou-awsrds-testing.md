@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://miro.medium.com/v2/resize:fit:1400/1*kJpzW9u-f2TH6bkzd4CC8A.png
+  path: https://images.velog.io/images/chaeri93/post/cbd6fdb0-45cc-473e-b29b-ddd0be24856c/rds.png
 ---
 
 ## AWS RDS
