@@ -1,7 +1,7 @@
 ---
 title: "corou : 배포"
 writer: James
-date: 2024-09-23 11:00:00 +0900
+date: 2024-09-24 00:01:00 +0900
 categories: [devlog, corou]
 tags: [devlog, corou, side project]
 pin: false
