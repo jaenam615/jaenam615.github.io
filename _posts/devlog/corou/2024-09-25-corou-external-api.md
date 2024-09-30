@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://blog.kakaocdn.net/dn/I0fI1/btqCUbSwdwr/WeSNgsCc4KjVyX35SUiSH1/img.png
+  path: https://developers.kakao.com/docs/latest/ko/assets/style/images/kakaologin/kakaologin_sequence.png
 ---
 
 ## 필터링  
