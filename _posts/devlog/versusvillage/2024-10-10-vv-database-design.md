@@ -1,5 +1,5 @@
 ---
-title: "versus village-database"
+title: "versus village: database"
 writer: James
 date: 2024-10-10 00:01:00 +0900
 categories: [devlog, vv]
