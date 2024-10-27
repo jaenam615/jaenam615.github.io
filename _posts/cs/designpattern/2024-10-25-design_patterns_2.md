@@ -1,7 +1,7 @@
 ---
 title: "디자인 패턴 - 옵저버, 이터레이터, 노출모듈 패턴"
 writer: James
-date: 2024-10-24 15:55:01 +0900
+date: 2024-10-25 15:55:01 +0900
 categories: [cs, design pattern]
 tags: [cs, design pattern]
 pin: false

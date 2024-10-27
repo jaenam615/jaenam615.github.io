@@ -1,5 +1,5 @@
 ---
-title: "디자인 패턴 - 싱글톤, 팩토리 메서드, 전략"
+title: "디자인 패턴 - 싱글톤, 팩토리 메서드, 전략 패턴"
 writer: James
 date: 2024-10-24 15:55:01 +0900
 categories: [cs, design pattern]
