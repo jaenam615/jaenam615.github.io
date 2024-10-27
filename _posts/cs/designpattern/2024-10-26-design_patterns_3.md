@@ -1,7 +1,7 @@
 ---
-title: "디자인 패턴 - "
+title: "디자인 패턴 - MVC, MVVM 패턴"
 writer: James
-date: 2024-10-26 01:55:01 +0900
+date: 2024-10-27 01:55:01 +0900
 categories: [cs, design pattern]
 tags: [cs, design pattern]
 pin: false
