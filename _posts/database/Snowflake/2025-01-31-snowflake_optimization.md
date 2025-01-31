@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path:
+  path: https://www.netguru.com/hs-fs/hubfs/_Images%20for%20blog/2-Jul-15-2021-10-33-13-96-AM.jpg?width=1200&height=630&name=2-Jul-15-2021-10-33-13-96-AM.jpg
 ---
 
 ## 들어가며
