@@ -1,7 +1,7 @@
 ---
 title: "Snowflake 최적화 전략"
 writer: James
-date: 2025-01-31 15:00:00 +0900
+date: 2025-01-31 01:00:00 +0900
 categories: [db, snowflake]
 tags: [db, snowflake, sql]
 pin: false
