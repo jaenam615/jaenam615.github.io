@@ -8,7 +8,7 @@ pin: false
 math: true
 mermaid: true
 image:
-  path: https://2679069.fs1.hubspotusercontent-na1.net/hubfs/2679069/Copy%20of%20dimension%20site%20%20%2816%29.jpg
+  path: https://miro.medium.com/v2/resize:fit:929/0*ssWyNoXo-oi_t26h.png
 ---
 
 ## 들어가며
