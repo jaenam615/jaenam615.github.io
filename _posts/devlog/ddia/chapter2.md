@@ -1,3 +1,15 @@
+---
+title: "범용 데이터 모델과 질의 언어에 대한 이해"
+writer: James
+date: 2025-07-20 00:00:02 +0900
+categories: [devlog]
+tags: [devlog, ddia]
+pin: false
+math: true
+mermaid: true
+---
+
+
 # Summary: 범용 데이터 모델과 질의 언어에 대한 이해
 
 ---

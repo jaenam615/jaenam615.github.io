@@ -1,3 +1,14 @@
+---
+title: "신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션"
+writer: James
+date: 2025-07-20 00:00:01 +0900
+categories: [devlog]
+tags: [devlog, ddia]
+pin: false
+math: true
+mermaid: true
+---
+
 # 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션
 
 ## Summary: 데이터 중심 애플리케이션의 기초
